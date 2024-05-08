@@ -34,4 +34,7 @@ public:
 	void SetEscudoAmericano(FString _escudoAmericano) override;
 
 	void CaracteristicasPortaNaveAerea();
+
+
+	//void XD();
 };
