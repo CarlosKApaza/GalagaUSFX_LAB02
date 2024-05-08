@@ -8,6 +8,8 @@
 
 #include "PortaNavesAereas.generated.h"
 
+class UStaticMeshComponent;
+
 UCLASS()
 class GALAGAUSFX_LAB06_API APortaNavesAereas : public AActor, public IPlanoPortaNavesAereas
 {
@@ -36,5 +38,7 @@ public:
 	void CaracteristicasPortaNaveAerea();
 
 
-	//void XD();
+public:
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Components", meta = (AllowPrivateAccess = "true"))
+	UStaticMeshComponent* MallaPortaNave;
 };

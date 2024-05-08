@@ -2,6 +2,10 @@
 
 
 #include "PortaNavesAereas.h"
+#include "Components/StaticMeshComponent.h"
+#include "UObject/ConstructorHelpers.h"
+#include "Engine/StaticMesh.h"
+
 
 // Sets default values
 APortaNavesAereas::APortaNavesAereas()
@@ -9,6 +13,11 @@ APortaNavesAereas::APortaNavesAereas()
  	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
 
+	static ConstructorHelpers::FObjectFinder<UStaticMesh> mallaPortaNave(TEXT("StaticMesh'/Game/StarterContent/Shapes/Shape_Plane.Shape_Plane'"));
+	// Create the mesh component
+	MallaPortaNave = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("ShipMesh"));
+	MallaPortaNave->SetStaticMesh(mallaPortaNave.Object);
+	MallaPortaNave->SetupAttachment(RootComponent);
 }
 
 // Called when the game starts or when spawned

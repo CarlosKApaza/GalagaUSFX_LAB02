@@ -31,6 +31,7 @@ private:
 
 public:
 	TArray<ANaveEnemiga*> TANavesEnemigas; //Array de Naves Enemigas
+	//TArray<APortaNavesAereas*> TAPortaNavesAereas; //Array que almacena la Porta Naves Aereas
 
 	int ClaveNaves = 0; // clave para las naves enemigas
 	//int Puntaje; //Puntaje del jugador
