@@ -1,0 +1,5 @@
+D:\Mis repositorios SIS457 desde 07-05-2024\GalagaUSFX_Trabajo02_SegundoParcial-master\GalagaUSFX_Trabajo02_SegundoParcial-master\Intermediate\Build\Win64\UE4Editor\DebugGame\GalagaUSFX_LAB06\Definitions.GalagaUSFX_LAB06.h
+D:\Mis repositorios SIS457 desde 07-05-2024\GalagaUSFX_Trabajo02_SegundoParcial-master\GalagaUSFX_Trabajo02_SegundoParcial-master\Source\GalagaUSFX_LAB06\NaveAcuatica_Espia.h
+D:\Mis repositorios SIS457 desde 07-05-2024\GalagaUSFX_Trabajo02_SegundoParcial-master\GalagaUSFX_Trabajo02_SegundoParcial-master\Source\GalagaUSFX_LAB06\NaveEnemiga.h
+D:\Mis repositorios SIS457 desde 07-05-2024\GalagaUSFX_Trabajo02_SegundoParcial-master\GalagaUSFX_Trabajo02_SegundoParcial-master\Intermediate\Build\Win64\UE4Editor\Inc\GalagaUSFX_LAB06\NaveEnemiga.generated.h
+D:\Mis repositorios SIS457 desde 07-05-2024\GalagaUSFX_Trabajo02_SegundoParcial-master\GalagaUSFX_Trabajo02_SegundoParcial-master\Intermediate\Build\Win64\UE4Editor\Inc\GalagaUSFX_LAB06\NaveAcuatica_Espia.generated.h

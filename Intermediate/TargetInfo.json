@@ -1,0 +1,14 @@
+{
+	"Targets": [
+		{
+			"Name": "GalagaUSFX_LAB06",
+			"Path": "D:\\Mis repositorios SIS457 desde 07-05-2024\\GalagaUSFX_Trabajo02_SegundoParcial-master\\GalagaUSFX_Trabajo02_SegundoParcial-master\\Source\\GalagaUSFX_LAB06.Target.cs",
+			"Type": "Game"
+		},
+		{
+			"Name": "GalagaUSFX_LAB06Editor",
+			"Path": "D:\\Mis repositorios SIS457 desde 07-05-2024\\GalagaUSFX_Trabajo02_SegundoParcial-master\\GalagaUSFX_Trabajo02_SegundoParcial-master\\Source\\GalagaUSFX_LAB06Editor.Target.cs",
+			"Type": "Editor"
+		}
+	]
+}
