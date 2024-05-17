@@ -2,6 +2,8 @@ D:\Mis repositorios SIS457 desde 07-05-2024\GalagaUSFX_Trabajo02_SegundoParcial-
 D:\Mis repositorios SIS457 desde 07-05-2024\GalagaUSFX_Trabajo02_SegundoParcial-master\GalagaUSFX_Trabajo02_SegundoParcial-master\Source\GalagaUSFX_LAB06\GalagaUSFX_LAB06Projectile.h
 D:\Mis repositorios SIS457 desde 07-05-2024\GalagaUSFX_Trabajo02_SegundoParcial-master\GalagaUSFX_Trabajo02_SegundoParcial-master\Source\GalagaUSFX_LAB06\NaveEnemiga.h
 D:\Mis repositorios SIS457 desde 07-05-2024\GalagaUSFX_Trabajo02_SegundoParcial-master\GalagaUSFX_Trabajo02_SegundoParcial-master\Intermediate\Build\Win64\UE4Editor\Inc\GalagaUSFX_LAB06\NaveEnemiga.generated.h
+D:\Mis repositorios SIS457 desde 07-05-2024\GalagaUSFX_Trabajo02_SegundoParcial-master\GalagaUSFX_Trabajo02_SegundoParcial-master\Source\GalagaUSFX_LAB06\FacadeColision.h
+D:\Mis repositorios SIS457 desde 07-05-2024\GalagaUSFX_Trabajo02_SegundoParcial-master\GalagaUSFX_Trabajo02_SegundoParcial-master\Intermediate\Build\Win64\UE4Editor\Inc\GalagaUSFX_LAB06\FacadeColision.generated.h
 D:\Mis repositorios SIS457 desde 07-05-2024\GalagaUSFX_Trabajo02_SegundoParcial-master\GalagaUSFX_Trabajo02_SegundoParcial-master\Intermediate\Build\Win64\UE4Editor\Inc\GalagaUSFX_LAB06\GalagaUSFX_LAB06Projectile.generated.h
 C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\GameFramework/ProjectileMovementComponent.h
 C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\GameFramework/MovementComponent.h
@@ -11,3 +13,11 @@ D:\Mis repositorios SIS457 desde 07-05-2024\GalagaUSFX_Trabajo02_SegundoParcial-
 D:\Mis repositorios SIS457 desde 07-05-2024\GalagaUSFX_Trabajo02_SegundoParcial-master\GalagaUSFX_Trabajo02_SegundoParcial-master\Intermediate\Build\Win64\UE4Editor\Inc\GalagaUSFX_LAB06\NaveAerea_Caza.generated.h
 D:\Mis repositorios SIS457 desde 07-05-2024\GalagaUSFX_Trabajo02_SegundoParcial-master\GalagaUSFX_Trabajo02_SegundoParcial-master\Source\GalagaUSFX_LAB06\NaveAerea_Transporte.h
 D:\Mis repositorios SIS457 desde 07-05-2024\GalagaUSFX_Trabajo02_SegundoParcial-master\GalagaUSFX_Trabajo02_SegundoParcial-master\Intermediate\Build\Win64\UE4Editor\Inc\GalagaUSFX_LAB06\NaveAerea_Transporte.generated.h
+D:\Mis repositorios SIS457 desde 07-05-2024\GalagaUSFX_Trabajo02_SegundoParcial-master\GalagaUSFX_Trabajo02_SegundoParcial-master\Source\GalagaUSFX_LAB06\NaveAcuatica_Espia.h
+D:\Mis repositorios SIS457 desde 07-05-2024\GalagaUSFX_Trabajo02_SegundoParcial-master\GalagaUSFX_Trabajo02_SegundoParcial-master\Intermediate\Build\Win64\UE4Editor\Inc\GalagaUSFX_LAB06\NaveAcuatica_Espia.generated.h
+D:\Mis repositorios SIS457 desde 07-05-2024\GalagaUSFX_Trabajo02_SegundoParcial-master\GalagaUSFX_Trabajo02_SegundoParcial-master\Source\GalagaUSFX_LAB06\NaveAcuatica_Exploracion.h
+D:\Mis repositorios SIS457 desde 07-05-2024\GalagaUSFX_Trabajo02_SegundoParcial-master\GalagaUSFX_Trabajo02_SegundoParcial-master\Intermediate\Build\Win64\UE4Editor\Inc\GalagaUSFX_LAB06\NaveAcuatica_Exploracion.generated.h
+D:\Mis repositorios SIS457 desde 07-05-2024\GalagaUSFX_Trabajo02_SegundoParcial-master\GalagaUSFX_Trabajo02_SegundoParcial-master\Source\GalagaUSFX_LAB06\NaveTerrestre_Transporte.h
+D:\Mis repositorios SIS457 desde 07-05-2024\GalagaUSFX_Trabajo02_SegundoParcial-master\GalagaUSFX_Trabajo02_SegundoParcial-master\Intermediate\Build\Win64\UE4Editor\Inc\GalagaUSFX_LAB06\NaveTerrestre_Transporte.generated.h
+D:\Mis repositorios SIS457 desde 07-05-2024\GalagaUSFX_Trabajo02_SegundoParcial-master\GalagaUSFX_Trabajo02_SegundoParcial-master\Source\GalagaUSFX_LAB06\NaveTerrestre_Artilleria.h
+D:\Mis repositorios SIS457 desde 07-05-2024\GalagaUSFX_Trabajo02_SegundoParcial-master\GalagaUSFX_Trabajo02_SegundoParcial-master\Intermediate\Build\Win64\UE4Editor\Inc\GalagaUSFX_LAB06\NaveTerrestre_Artilleria.generated.h

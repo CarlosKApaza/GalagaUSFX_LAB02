@@ -55,7 +55,7 @@ public:
 	void OcultarClavesNaves(); //Funcion para ocultar las claves de las naves
 
 
-	void CrearEnemigosAleatoriamente(TArray<FString> TiposNaves, FVector PosicionInicial, float EspacioEntreNavesY, int CantidadNaves); //Funcion para crear enemigos aleatoriamente
+	void CrearEnemigosAleatoriamente(TArray<FString> TiposNaves, FVector PosicionInicial, FRotator RotacionNaves, float EspacioEntreNavesY, int CantidadNaves); //Funcion para crear enemigos aleatoriamente
 	void CrearEnemigos(); //Funcion para crear enemigos de un tipo especifico
 
 

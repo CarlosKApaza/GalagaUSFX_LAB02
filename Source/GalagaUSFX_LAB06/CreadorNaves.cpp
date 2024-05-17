@@ -27,10 +27,10 @@ void ACreadorNaves::Tick(float DeltaTime)
 
 }
 
-ANaveEnemiga* ACreadorNaves::OrdenarNave(FString Categotia, FVector UbicacionNaveOrden)
+ANaveEnemiga* ACreadorNaves::OrdenarNave(FString Categotia, FVector UbicacionNaveOrden, FRotator Rotacion)
 {
 	// Crea la nave y registra su nombre
-	ANaveEnemiga* NaveEnemiga = CrearNaveEnemiga(Categotia, UbicacionNaveOrden);
+	ANaveEnemiga* NaveEnemiga = CrearNaveEnemiga(Categotia, UbicacionNaveOrden, Rotacion);
 	//GEngine->AddOnScreenDebugMessage(-1, 15.f, FColor::Yellow, FString::Printf(TEXT("Creando %s"), *NaveEnemiga->GetNombreNave()));
 
 	// Retorna la nave creada

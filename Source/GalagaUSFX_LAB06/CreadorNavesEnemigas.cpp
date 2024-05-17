@@ -9,7 +9,7 @@
 #include "NaveEnemigaEspia.h"
 #include "NaveEnemigaTransporte.h"
 
-ANaveEnemiga* ACreadorNavesEnemigas::CrearNaveEnemiga(FString NombreNaveSKU, FVector PosicionNave)
+ANaveEnemiga* ACreadorNavesEnemigas::CrearNaveEnemiga(FString NombreNaveSKU, FVector PosicionNave, FRotator Rotacion)
 {
 	// Selecciona que nave crear dependiendo de la cadena pasada
 	if (NombreNaveSKU.Equals("NaveEnemigaCaza")) {

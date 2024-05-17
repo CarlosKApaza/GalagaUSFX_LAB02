@@ -66,12 +66,14 @@ void AGalagaUSFX_LAB06GameMode::BeginPlay()
 
 		// Creamos una nueva Posicion para las naves tipo Aereas
 		FVector	PosicionNavesAereas = FVector(-450.0f, -200.0f, 200.0f);
+		FRotator RotacionNavesAereas = FRotator(0.0f, 180.0f, 0.0f);  // Rotación en Z a 180 grados
+
 
 		// Creamos 7 naves de la clase NaveAerea_Caza
 		for (int i = 0; i < 7; i++)
 		{
 			// Llamamos a la fabrica de naves aereas para crear una nave de la clase NaveAerea_Caza
-			ANaveEnemiga* NaveEnemiga = CreadorNavesAereas->OrdenarNave("NaveAerea_Caza", PosicionNavesAereas);
+			ANaveEnemiga* NaveEnemiga = CreadorNavesAereas->OrdenarNave("NaveAerea_Caza", PosicionNavesAereas, RotacionNavesAereas);
 			NaveEnemiga->idClaveNave = ClaveNaves++; // Asignar la clave y luego incrementar
 			TMClavesNavesEnemigas.Add(NaveEnemiga, ClaveNaves); // Agregamos la nave al TMap y la Clave de la naves aerea caza
 			TMNavesEnemigas.Add(NaveEnemiga, PosicionNavesAereas); // Agregamos la nave al TMap y la Posicion de la nave aerea caza
@@ -88,7 +90,7 @@ void AGalagaUSFX_LAB06GameMode::BeginPlay()
 		for (int i = 0; i < 7; i++)
 		{
 			// Llamamos a la fabrica de naves aereas para crear una nave de la clase NaveAerea_Transporte
-			ANaveEnemiga* NaveEnemiga = CreadorNavesAereas->OrdenarNave("NaveAerea_Transporte", PosicionNavesAereas);
+			ANaveEnemiga* NaveEnemiga = CreadorNavesAereas->OrdenarNave("NaveAerea_Transporte", PosicionNavesAereas, FRotator::ZeroRotator);
 			NaveEnemiga->idClaveNave = ClaveNaves++; // Asignar la clave y luego incrementar
 			TMClavesNavesEnemigas.Add(NaveEnemiga, ClaveNaves); // Agregamos la nave al TMap y la Clave de la naves aerea transporte
 			TMNavesEnemigas.Add(NaveEnemiga, PosicionNavesAereas); // Agregamos la nave al TMap y la Posicion de la nave aerea transporte
@@ -104,7 +106,7 @@ void AGalagaUSFX_LAB06GameMode::BeginPlay()
 		for (int i = 0; i < 7; i++)
 		{
 			// Llamamos a la fabrica de naves terrestres para crear una nave de la clase NaveTerrestre_Transporte
-			ANaveEnemiga* NaveEnemiga = CreadorNavesTerrestres->OrdenarNave("NaveTerrestre_Transporte", PosicionNavesTerrestres);
+			ANaveEnemiga* NaveEnemiga = CreadorNavesTerrestres->OrdenarNave("NaveTerrestre_Transporte", PosicionNavesTerrestres, FRotator::ZeroRotator);
 			NaveEnemiga->idClaveNave = ClaveNaves++; // Asignar la clave y luego incrementar
 			TMClavesNavesEnemigas.Add(NaveEnemiga, ClaveNaves); // Agregamos la nave al TMap y la Clave de la naves terrestre transporte
 			//TMANavesEnemigas.Add(NaveEnemiga, PosicionNavesTerrestres); // Agregamos la nave al TMap y la Posicion de la nave terrestre transporte
@@ -120,7 +122,7 @@ void AGalagaUSFX_LAB06GameMode::BeginPlay()
 		for (int i = 0; i < 7; i++)
 		{
 			// Llamamos a la fabrica de naves terrestres para crear una nave de la clase NaveTerrestre_Artilleria
-			ANaveEnemiga* NaveEnemiga = CreadorNavesTerrestres->OrdenarNave("NaveTerrestre_Artilleria", PosicionNavesTerrestres);
+			ANaveEnemiga* NaveEnemiga = CreadorNavesTerrestres->OrdenarNave("NaveTerrestre_Artilleria", PosicionNavesTerrestres, FRotator::ZeroRotator);
 			NaveEnemiga->idClaveNave = ClaveNaves++; // Asignar la clave y luego incrementar
 			TMClavesNavesEnemigas.Add(NaveEnemiga, ClaveNaves); // Agregamos la nave al TMap y la Clave de la naves terrestre artilleria
 			//TMANavesEnemigas.Add(NaveEnemiga, PosicionNavesTerrestres); // Agregamos la nave al TMap y la Posicion de la nave terrestre artilleria
@@ -135,7 +137,7 @@ void AGalagaUSFX_LAB06GameMode::BeginPlay()
 		for (int i = 0; i < 7; i++)
 		{
 			// Llamamos a la fabrica de naves acuaticas para crear una nave de la clase NaveAcuatica_Exploracion
-			ANaveEnemiga* NaveEnemiga = CreadorNavesAcuaticas->OrdenarNave("NaveAcuatica_Exploracion", PosicionNavesAcuaticas);
+			ANaveEnemiga* NaveEnemiga = CreadorNavesAcuaticas->OrdenarNave("NaveAcuatica_Exploracion", PosicionNavesAcuaticas, FRotator::ZeroRotator);
 			NaveEnemiga->idClaveNave = ClaveNaves++; // Asignar la clave y luego incrementar
 			TMClavesNavesEnemigas.Add(NaveEnemiga, ClaveNaves); // Agregamos la nave al TMap y la Clave de la naves acuatica exploracion
 			//TMANavesEnemigas.Add(NaveEnemiga, PosicionNavesAcuaticas); // Agregamos la nave al TMap y la Posicion de la nave acuatica exploracion
@@ -151,7 +153,7 @@ void AGalagaUSFX_LAB06GameMode::BeginPlay()
 		for (int i = 0; i < 7; i++)
 		{
 			// Llamamos a la fabrica de naves acuaticas para crear una nave de la clase NaveAcuatica_Espia
-			ANaveEnemiga* NaveEnemiga = CreadorNavesAcuaticas->OrdenarNave("NaveAcuatica_Espia", PosicionNavesAcuaticas);
+			ANaveEnemiga* NaveEnemiga = CreadorNavesAcuaticas->OrdenarNave("NaveAcuatica_Espia", PosicionNavesAcuaticas, FRotator::ZeroRotator);
 			NaveEnemiga->idClaveNave = ClaveNaves++; // Asignar la clave y luego incrementar
 			TMClavesNavesEnemigas.Add(NaveEnemiga, ClaveNaves); // Agregamos la nave al TMap y la Clave de la naves acuatica espia
 			//TMANavesEnemigas.Add(NaveEnemiga, PosicionNavesAcuaticas); // Agregamos la nave al TMap y la Posicion de la nave acuatica espia
@@ -215,7 +217,7 @@ void AGalagaUSFX_LAB06GameMode::MostrarClavesNaves()
 		if (GEngine)
 		{
 			// Usar un valor entero en lugar de flotante para el alfa
-			GEngine->AddOnScreenDebugMessage(-1, 10.0f, FColor::Yellow, mensaje);
+			GEngine->AddOnScreenDebugMessage(-1, 2.0f, FColor::Yellow, mensaje);
 		}
 	}	
 }
@@ -228,7 +230,7 @@ void AGalagaUSFX_LAB06GameMode::OcultarClavesNaves()
 
 
 // Función para crear enemigos aleatoriamente
-void AGalagaUSFX_LAB06GameMode::CrearEnemigosAleatoriamente(TArray<FString> TiposNaves, FVector PosicionInicial, float EspacioEntreNavesY, int CantidadNaves)
+void AGalagaUSFX_LAB06GameMode::CrearEnemigosAleatoriamente(TArray<FString> TiposNaves, FVector PosicionInicial, FRotator RotacionNaves, float EspacioEntreNavesY, int CantidadNaves)
 {
 	// Obtener el mundo
 	UWorld* const World = GetWorld();
@@ -254,7 +256,7 @@ void AGalagaUSFX_LAB06GameMode::CrearEnemigosAleatoriamente(TArray<FString> Tipo
 			++It;
 		}
 		FVector PosicionNaveNueva = It->Value;
-
+		FRotator RotacionNaveNueva = RotacionNaves;
 		// Ajustar la posición Y basada en el índice de iteración
 		PosicionNaveNueva.Y = PosicionY + (i * IncrementoY);
 
@@ -266,7 +268,7 @@ void AGalagaUSFX_LAB06GameMode::CrearEnemigosAleatoriamente(TArray<FString> Tipo
 		ANaveEnemiga* NuevaNaveEnemiga = nullptr;
 		if (TipoNaveEnemiga == "NaveAerea_Caza")
 		{
-			NuevaNaveEnemiga = World->SpawnActor<ANaveAerea_Caza>(ANaveAerea_Caza::StaticClass(), PosicionNaveNueva, FRotator::ZeroRotator);
+			NuevaNaveEnemiga = World->SpawnActor<ANaveAerea_Caza>(ANaveAerea_Caza::StaticClass(), PosicionNaveNueva, RotacionNaveNueva);
 		}
 		else if (TipoNaveEnemiga == "NaveAerea_Transporte")
 		{
@@ -297,12 +299,13 @@ void AGalagaUSFX_LAB06GameMode::CrearEnemigos()
 
 	// Posición inicial de las naves
 	FVector PosicionInicial = FVector(0.0f, -650.0f, 200.0f);
+	FRotator RotacionNaves = FRotator(0.0f, 180.0f, 0.0f);
 
 	// Cantidad de naves a crear
 	int CantidadNaves = 10;
 
 	// Llamada a la función para crear las naves enemigas aleatoriamente
-	CrearEnemigosAleatoriamente(TiposNaves, PosicionInicial, EspacioEntreNavesY, CantidadNaves);
+	CrearEnemigosAleatoriamente(TiposNaves, PosicionInicial, RotacionNaves, EspacioEntreNavesY, CantidadNaves);
 }
 
 

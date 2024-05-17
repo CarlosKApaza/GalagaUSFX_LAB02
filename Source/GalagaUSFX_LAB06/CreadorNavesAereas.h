@@ -15,5 +15,5 @@ class GALAGAUSFX_LAB06_API ACreadorNavesAereas : public ACreadorNaves
 	GENERATED_BODY()
 
 public:
-	virtual ANaveEnemiga* CrearNaveEnemiga(FString NombreNaveSKU, FVector PosicionNave) override;
+	virtual ANaveEnemiga* CrearNaveEnemiga(FString NombreNaveSKU, FVector PosicionNave, FRotator Rotacion) override;
 };

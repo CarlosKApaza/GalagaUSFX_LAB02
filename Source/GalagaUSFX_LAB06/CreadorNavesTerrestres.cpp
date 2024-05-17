@@ -6,7 +6,7 @@
 #include "NaveTerrestre_Transporte.h"
 #include "NaveTerrestre_Artilleria.h"
 
-ANaveEnemiga* ACreadorNavesTerrestres::CrearNaveEnemiga(FString NombreNaveSKU, FVector PosicionNave)
+ANaveEnemiga* ACreadorNavesTerrestres::CrearNaveEnemiga(FString NombreNaveSKU, FVector PosicionNave, FRotator Rotacion)
 {
 	// Selecciona que nave crear dependiendo de la cadena pasada
 	if (NombreNaveSKU.Equals("NaveTerrestre_Transporte")) {

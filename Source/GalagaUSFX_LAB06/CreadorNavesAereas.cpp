@@ -3,15 +3,16 @@
 
 #include "CreadorNavesAereas.h"
 
+#include "NaveEnemiga.h"
 #include "NaveAerea_Transporte.h"
 #include "NaveAerea_Caza.h"
 
-ANaveEnemiga* ACreadorNavesAereas::CrearNaveEnemiga(FString NombreNaveSKU, FVector PosicionNave)
+ANaveEnemiga* ACreadorNavesAereas::CrearNaveEnemiga(FString NombreNaveSKU, FVector PosicionNave, FRotator Rotacion)
 {
 	// Selecciona que nave crear dependiendo de la cadena pasada
 	if (NombreNaveSKU.Equals("NaveAerea_Caza")) {
 		return GetWorld()->SpawnActor<ANaveAerea_Caza>(ANaveAerea_Caza::StaticClass(),
-			PosicionNave, FRotator::ZeroRotator);
+			PosicionNave, Rotacion);
 	}
 
 	// Selecciona que nave crear dependiendo de la cadena pasada

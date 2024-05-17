@@ -52,3 +52,19 @@ void ANaveAcuatica_Exploracion::Mover(float DeltaTime)
 	//  Establecemos la nueva posicion del actor
 	SetActorLocation(FVector(PosicionActual.X + NuevaX, MovimientoY, PosicionActual.Z));
 }
+
+
+int32 ANaveAcuatica_Exploracion::RecibirDanio(float dano)
+{
+	resistencia -= dano;
+	if (resistencia <= 0)
+	{
+		energia -= dano;    // Reducir la energía según la cantidad de daño recibido		}
+	}
+
+	if (energia <= 0)        // Verificar si la energía llega a cero o menos
+	{
+		Destroy();
+	}
+	return 0; // si la energia es menor o igual a 0 se destruye la nave
+}

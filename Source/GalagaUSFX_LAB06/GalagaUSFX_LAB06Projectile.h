@@ -5,6 +5,8 @@
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
 #include "NaveEnemiga.h"
+#include "FacadeColision.h"
+
 #include "GalagaUSFX_LAB06Projectile.generated.h"
 
 class UProjectileMovementComponent;
@@ -37,6 +39,9 @@ public:
 
 //public:
 //	TArray<ANaveEnemiga* >TANavesEnemigasEliminadas; //Array de Naves Enemigas
-//	
+
+public:
+	// Referencia al objeto FacadeColision
+	AFacadeColision* FacadeColision;
 };
 

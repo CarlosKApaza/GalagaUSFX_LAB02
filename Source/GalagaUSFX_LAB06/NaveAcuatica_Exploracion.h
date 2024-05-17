@@ -23,6 +23,7 @@ public:
 	virtual void Tick(float DeltaTime) override;
 	public:
 		virtual void Mover(float DeltaTime);
+		int32 RecibirDanio(float dano);
 protected:
 	// Velocidad en el eje Y
 	UPROPERTY(EditAnywhere, Category = "Velocidad Nave Acuatica Exploracion")

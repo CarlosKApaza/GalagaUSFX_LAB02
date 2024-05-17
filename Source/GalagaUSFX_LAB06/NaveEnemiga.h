@@ -29,6 +29,8 @@ protected:
 
 	FString nombre;
 	FVector posicion;
+	FVector EscalaNaveEnemiga;
+	FRotator RotacionNave;
 	//CATrayectoria* trayectoria;
 
 public:
@@ -43,6 +45,8 @@ public:
 	FORCEINLINE float GetTiempoDisparo() const { return tiempoDisparo; }
 	FORCEINLINE FString GetNombre() const { return nombre; }
 	FORCEINLINE FVector GetPosicion() const { return posicion; }
+	FORCEINLINE FVector GetEscalaNaveEnemiga() const { return EscalaNaveEnemiga; }
+	FORCEINLINE FRotator GetRotacionNave() const { return RotacionNave; }
 
 	//setters
 	FORCEINLINE void SetVelocidad(float _velocidad) { velocidad = _velocidad; }
@@ -55,6 +59,8 @@ public:
 	FORCEINLINE void SetTiempoDisparo(float _tiempoDisparo) { tiempoDisparo = _tiempoDisparo; }
 	FORCEINLINE void SetNombre(FString _nombre) { nombre = _nombre; }
 	FORCEINLINE void SetPosicion(FVector _posicion) { posicion = _posicion; }
+	FORCEINLINE void SetEscalaNaveEnemiga(FVector _EscalaNaveEnemiga) { EscalaNaveEnemiga = _EscalaNaveEnemiga; }
+	FORCEINLINE void SetRotacionNave(FRotator _RotacionNave) { RotacionNave = _RotacionNave; }
 
 public:
 	int idClaveNave; //clave para identificar la nave

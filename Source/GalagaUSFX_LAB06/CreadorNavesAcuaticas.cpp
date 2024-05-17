@@ -6,7 +6,7 @@
 #include "NaveAcuatica_Exploracion.h"
 #include "NaveAcuatica_Espia.h"
 
-ANaveEnemiga* ACreadorNavesAcuaticas::CrearNaveEnemiga(FString NombreNaveSKU, FVector PosicionNave)
+ANaveEnemiga* ACreadorNavesAcuaticas::CrearNaveEnemiga(FString NombreNaveSKU, FVector PosicionNave, FRotator Rotacion)
 {
 	// Selecciona que nave crear dependiendo de la cadena pasada
 	if (NombreNaveSKU.Equals("NaveAcuatica_Exploracion")) {

@@ -10,10 +10,16 @@ void ANaveAerea_Caza::BeginPlay()
 
 ANaveAerea_Caza::ANaveAerea_Caza()
 {
-	static ConstructorHelpers::FObjectFinder<UStaticMesh> malla(TEXT("StaticMesh'/Game/StarterContent/Shapes/Shape_Cube.Shape_Cube'"));
+	static ConstructorHelpers::FObjectFinder<UStaticMesh> malla(TEXT("StaticMesh'/Game/TwinStick/Meshes/TwinStickUFO_2.TwinStickUFO_2'"));
 	mallaNaveEnemiga->SetStaticMesh(malla.Object);
+	//Escala de la nave
 
-	NombreNave = "NaveAerea_Caza"; //Nombre de la nave
+   /* FRotator Rotacion = FRotator(0.0f, 0.0f, 180.0f);
+	SetActorRotation(Rotacion);*/
+
+	// Escala de la nave
+	//EscalaNaveEnemiga = 1.0f;
+	//mallaNaveEnemiga->SetWorldScale3D(FVector(EscalaNaveEnemiga));
 
 	// Definimos la velocidad en la que se movera la nave en el eje X porque esta creada de forma vertical
 	VelocidadYCaza = -250.0f;
@@ -24,6 +30,9 @@ ANaveAerea_Caza::ANaveAerea_Caza()
 
     // Recompensa de la nave cuando se destruya
 	recompensaNave = 10;  // la nave otorga 10 puntos al ser destruida
+
+	//RotacionNave = FRotator(0.0f, 0.0f, 180.0f);
+	//SetActorRotation(RotacionNave);
 
    
 }

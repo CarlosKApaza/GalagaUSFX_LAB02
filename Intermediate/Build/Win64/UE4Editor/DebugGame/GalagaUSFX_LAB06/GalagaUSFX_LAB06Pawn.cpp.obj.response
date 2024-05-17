@@ -259,8 +259,11 @@
 /I "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\shared"
 /I "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\um"
 /I "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\winrt"
+/FI"D:\Mis repositorios SIS457 desde 07-05-2024\GalagaUSFX_Trabajo02_SegundoParcial-master\GalagaUSFX_Trabajo02_SegundoParcial-master\Intermediate\Build\Win64\GalagaUSFX_LAB06Editor\DebugGame\Engine\SharedPCH.Engine.NonOptimized.ShadowErrors.h"
+/Yu"D:\Mis repositorios SIS457 desde 07-05-2024\GalagaUSFX_Trabajo02_SegundoParcial-master\GalagaUSFX_Trabajo02_SegundoParcial-master\Intermediate\Build\Win64\GalagaUSFX_LAB06Editor\DebugGame\Engine\SharedPCH.Engine.NonOptimized.ShadowErrors.h"
+/Fp"D:\Mis repositorios SIS457 desde 07-05-2024\GalagaUSFX_Trabajo02_SegundoParcial-master\GalagaUSFX_Trabajo02_SegundoParcial-master\Intermediate\Build\Win64\GalagaUSFX_LAB06Editor\DebugGame\Engine\SharedPCH.Engine.NonOptimized.ShadowErrors.h.pch"
 "D:\Mis repositorios SIS457 desde 07-05-2024\GalagaUSFX_Trabajo02_SegundoParcial-master\GalagaUSFX_Trabajo02_SegundoParcial-master\Source\GalagaUSFX_LAB06\GalagaUSFX_LAB06Pawn.cpp"
-/FI"D:\Mis repositorios SIS457 desde 07-05-2024\GalagaUSFX_Trabajo02_SegundoParcial-master\GalagaUSFX_Trabajo02_SegundoParcial-master\Intermediate\Build\Win64\UE4Editor\DebugGame\GalagaUSFX_LAB06\Definitions.h"
+/FI"D:\Mis repositorios SIS457 desde 07-05-2024\GalagaUSFX_Trabajo02_SegundoParcial-master\GalagaUSFX_Trabajo02_SegundoParcial-master\Intermediate\Build\Win64\UE4Editor\DebugGame\GalagaUSFX_LAB06\Definitions.GalagaUSFX_LAB06.h"
 /Fo"D:\Mis repositorios SIS457 desde 07-05-2024\GalagaUSFX_Trabajo02_SegundoParcial-master\GalagaUSFX_Trabajo02_SegundoParcial-master\Intermediate\Build\Win64\UE4Editor\DebugGame\GalagaUSFX_LAB06\GalagaUSFX_LAB06Pawn.cpp.obj"
 /TP
 /GR-

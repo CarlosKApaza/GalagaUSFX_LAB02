@@ -20,7 +20,7 @@ ANaveTerrestre_Artilleria::ANaveTerrestre_Artilleria()
 
 	//VIDA DE LA NAVE 
 	energia = 10; // Inicializar la energia que tendra la nave
-	resistencia = 30; // Inicializar la resistencia que tendra la nave
+	resistencia = 50; // Inicializar la resistencia que tendra la nave
 	/*VelocidadXArtilleria = 0.0f;*/
 }
 
@@ -52,3 +52,18 @@ void ANaveTerrestre_Artilleria::Mover(float DeltaTime)
  
 }
 
+
+int32 ANaveTerrestre_Artilleria::RecibirDanio(float dano)
+{
+	resistencia -= dano;
+	if (resistencia <= 0)
+	{
+		energia -= dano;    // Reducir la energía según la cantidad de daño recibido
+	}
+	if (energia <= 0)        // Verificar si la energía llega a cero o menos
+	{
+		// Destruir la nave
+		Destroy();
+	}
+	return 0;
+}
