@@ -22,7 +22,11 @@ class GALAGAUSFX_LAB06_API IPlanoPortaNavesAereas
 
 	// Add interface functions to this class. This is the class that will be inherited to implement this interface.
 public:
+
+	// metodos para el nivel 1
 	virtual void SetHangar(FString hangar) = 0;
-	virtual void SetRecargarMunicioines(FString recargarMuniciones) = 0;
-	virtual void SetEscudoAmericano(FString escudoAmericano) = 0;
+	virtual void SetCentrodeMuniciones(FString Municiones) = 0;
+	virtual void SetCentrodeEscudos(FString escudos) = 0;
+
+
 };

@@ -18,6 +18,11 @@ APortaNavesAereas::APortaNavesAereas()
 	MallaPortaNave = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("ShipMesh"));
 	MallaPortaNave->SetStaticMesh(mallaPortaNave.Object);
 	MallaPortaNave->SetupAttachment(RootComponent);
+
+
+	// Inicializamos NumBalas y MaxBalas a algún valor
+	NumBalas = 0;
+	MaxBalas = 100; // Número máximo de balas permitidas
 }
 
 // Called when the game starts or when spawned
@@ -34,33 +39,29 @@ void APortaNavesAereas::Tick(float DeltaTime)
 
 void APortaNavesAereas::SetHangar(FString _hangar)
 {
-	hangar = _hangar;
+	Hangar = _hangar;
 }
 
-void APortaNavesAereas::SetRecargarMunicioines(FString _recargarMuniciones)
+void APortaNavesAereas::SetCentrodeMuniciones(FString _Municiones)
 {
-	recargarMuniciones = _recargarMuniciones;
+	CentroMuniciones = _Municiones;
 }
 
-void APortaNavesAereas::SetEscudoAmericano(FString _escudoAmericano)
+void APortaNavesAereas::SetCentrodeEscudos(FString _escudos)
 {
-	escudoAmericano = _escudoAmericano;
+	Escudos = _escudos;
 }
 
 void APortaNavesAereas::CaracteristicasPortaNaveAerea()
 {
-	GEngine->AddOnScreenDebugMessage(-1, 30.f, FColor::Yellow, FString::Printf(TEXT("Se creo el Hangar %s"), *hangar));
-	GEngine->AddOnScreenDebugMessage(-1, 30.f, FColor::Yellow, FString::Printf(TEXT("Puedes Recargar Municiones %s"), *recargarMuniciones));
-	GEngine->AddOnScreenDebugMessage(-1, 30.f, FColor::Yellow, FString::Printf(TEXT("Escudo Americano cuesta 100 monedas %s"), *escudoAmericano));
+	GEngine->AddOnScreenDebugMessage(-1, 30.f, FColor::Yellow, FString::Printf(TEXT("Se creo la PortaNaveAerea - Hangar %s"), *Hangar));
+	GEngine->AddOnScreenDebugMessage(-1, 30.f, FColor::Yellow, FString::Printf(TEXT("Puedes Recargar Municiones en el Hangar %s"), *CentroMuniciones));
+	GEngine->AddOnScreenDebugMessage(-1, 30.f, FColor::Yellow, FString::Printf(TEXT("Puedes comprar un Escudo Americano, cuesta 100 monedas %s"), *Escudos));
+}
 
-
-	//// Mostrar "Hangar" en la esquina superior derecha
-	//GEngine->AddOnScreenDebugMessage(-1, 25.f, FColor::Yellow, FString::Printf(TEXT("Hangar: %s"), *hangar), false, FVector2D(1.f, 0.f));
-
-	//// Mostrar "Recargar Municiones" debajo del mensaje "Hangar" en la esquina superior derecha
-	//GEngine->AddOnScreenDebugMessage(-1, 25.f, FColor::Yellow, FString::Printf(TEXT("Recargar Municiones: %s"), *recargarMuniciones), false,  FVector2D(1.f, 0.f));
-
-	//// Mostrar "Escudo Americano" debajo del mensaje "Recargar Municiones" en la esquina superior derecha
-	//GEngine->AddOnScreenDebugMessage(-1, 25.f, FColor::Yellow, FString::Printf(TEXT("Escudo Americano: %s"), *escudoAmericano), false, FVector2D(1.f, 0.f) * 2);
+void APortaNavesAereas::RecargarBalas(int32 NumBalasRecargar)
+{
+	// Asegúrate de que el número de balas no exceda el máximo
+	NumBalas = FMath::Clamp(NumBalas + NumBalasRecargar, 0, MaxBalas);
 }
 

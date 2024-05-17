@@ -39,24 +39,39 @@ void ABuilderPortaNavesAereasNiv1::ConstruirHangar()
 	}
 }
 
-void ABuilderPortaNavesAereasNiv1::ConstruirRecargarMuniciones()
+void ABuilderPortaNavesAereasNiv1::ConstruirCentrodeMuniciones()
 {
 	if (!PortaNaveAerea) {
-		UE_LOG(LogTemp, Error, TEXT("BuildSwimmingPool():Lodging is NULL, make sure it's initialized.")); return; 
-		PortaNaveAerea->SetRecargarMunicioines("Recargar Municiones");
+		UE_LOG(LogTemp, Error, TEXT("BuildSwimmingPool():Lodging is NULL, make sure it's initialized.")); return;
+		PortaNaveAerea->SetCentrodeMuniciones("Centro de Municiones");
 	}
 }
 
-void ABuilderPortaNavesAereasNiv1::ConstruirEscudoAmericano()
+//void ABuilderPortaNavesAereasNiv1::ConstruirCentrodeMuniciones()
+//{
+//	if (PortaNaveAerea)
+//	{
+//		// Llama al método en PortaNavesAereas para recargar las municiones
+//		PortaNaveAerea->RecargarBalas(PortaNaveAerea->GetMaxBalas() - PortaNaveAerea->GetNumBalas()); // Asegúrate de no exceder el máximo
+//		UE_LOG(LogTemp, Warning, TEXT("Municiones recargadas en el hangar."));
+//	}
+//	else
+//	{
+//		UE_LOG(LogTemp, Error, TEXT("PortaNaveAerea is NULL, make sure it's initialized."));
+//	}
+//}
+
+void ABuilderPortaNavesAereasNiv1::ConstruirEscudos()
 {
 	if (!PortaNaveAerea) {
 		UE_LOG(LogTemp, Error, TEXT("BuildSwimmingPool():Lodging is NULL, make sure it's initialized.")); return; 
-		PortaNaveAerea->SetEscudoAmericano("Escudo Americano");
+		PortaNaveAerea->SetCentrodeEscudos("Centro de Escudos");
 	}
 }
 
 APortaNavesAereas* ABuilderPortaNavesAereasNiv1::GetPortaNaveAerea()
 {
 	return PortaNaveAerea;
+	
 }
 

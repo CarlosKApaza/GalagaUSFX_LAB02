@@ -21,14 +21,17 @@ protected:
 	virtual void BeginPlay() override;
 
 private:
+	// Nivel 1
 	//The Builder Actor
 	UPROPERTY(VisibleAnywhere, Category = "BuilderPNANiv1")
-	class ABuilderPortaNavesAereasNiv1* BuilderPortaNavesAereasNiv1;
+	class ABuilderPortaNavesAereasNiv1* BuilderPortaNavesAereasNiv1; 
 
 	//The Engineer Actor
 	UPROPERTY(VisibleAnywhere, Category = "DirectorPNA")
 	class ADirectorPortaNavesAereas* DirectorPortaNavesAereas;
 
+
+	
 public:
 	TArray<ANaveEnemiga*> TANavesEnemigas; //Array de Naves Enemigas
 	//TArray<APortaNavesAereas*> TAPortaNavesAereas; //Array que almacena la Porta Naves Aereas

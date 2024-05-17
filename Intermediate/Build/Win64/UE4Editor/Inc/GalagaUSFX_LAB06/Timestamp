@@ -1,11 +1,10 @@
-D:\Mis repositorios SIS457 desde 07-05-2024\GalagaUSFX_Trabajo02_SegundoParcial-master\GalagaUSFX_Trabajo02_SegundoParcial-master\Source\GalagaUSFX_LAB06\BuilderPortaNavesAereas.h
 D:\Mis repositorios SIS457 desde 07-05-2024\GalagaUSFX_Trabajo02_SegundoParcial-master\GalagaUSFX_Trabajo02_SegundoParcial-master\Source\GalagaUSFX_LAB06\BuilderPortaNavesAereasNiv1.h
 D:\Mis repositorios SIS457 desde 07-05-2024\GalagaUSFX_Trabajo02_SegundoParcial-master\GalagaUSFX_Trabajo02_SegundoParcial-master\Source\GalagaUSFX_LAB06\CreadorNavesAcuaticas.h
 D:\Mis repositorios SIS457 desde 07-05-2024\GalagaUSFX_Trabajo02_SegundoParcial-master\GalagaUSFX_Trabajo02_SegundoParcial-master\Source\GalagaUSFX_LAB06\CreadorNavesAereas.h
 D:\Mis repositorios SIS457 desde 07-05-2024\GalagaUSFX_Trabajo02_SegundoParcial-master\GalagaUSFX_Trabajo02_SegundoParcial-master\Source\GalagaUSFX_LAB06\CreadorNavesEnemigas.h
 D:\Mis repositorios SIS457 desde 07-05-2024\GalagaUSFX_Trabajo02_SegundoParcial-master\GalagaUSFX_Trabajo02_SegundoParcial-master\Source\GalagaUSFX_LAB06\CreadorNaves.h
 D:\Mis repositorios SIS457 desde 07-05-2024\GalagaUSFX_Trabajo02_SegundoParcial-master\GalagaUSFX_Trabajo02_SegundoParcial-master\Source\GalagaUSFX_LAB06\GalagaUSFX_LAB06Pawn.h
-D:\Mis repositorios SIS457 desde 07-05-2024\GalagaUSFX_Trabajo02_SegundoParcial-master\GalagaUSFX_Trabajo02_SegundoParcial-master\Source\GalagaUSFX_LAB06\CreadorNavesTerrestres.h
+D:\Mis repositorios SIS457 desde 07-05-2024\GalagaUSFX_Trabajo02_SegundoParcial-master\GalagaUSFX_Trabajo02_SegundoParcial-master\Source\GalagaUSFX_LAB06\GalagaUSFX_LAB06Projectile.h
 D:\Mis repositorios SIS457 desde 07-05-2024\GalagaUSFX_Trabajo02_SegundoParcial-master\GalagaUSFX_Trabajo02_SegundoParcial-master\Source\GalagaUSFX_LAB06\NaveAcuatica_Espia.h
 D:\Mis repositorios SIS457 desde 07-05-2024\GalagaUSFX_Trabajo02_SegundoParcial-master\GalagaUSFX_Trabajo02_SegundoParcial-master\Source\GalagaUSFX_LAB06\NaveAcuatica_Exploracion.h
 D:\Mis repositorios SIS457 desde 07-05-2024\GalagaUSFX_Trabajo02_SegundoParcial-master\GalagaUSFX_Trabajo02_SegundoParcial-master\Source\GalagaUSFX_LAB06\NaveAerea_Caza.h
@@ -17,8 +16,10 @@ D:\Mis repositorios SIS457 desde 07-05-2024\GalagaUSFX_Trabajo02_SegundoParcial-
 D:\Mis repositorios SIS457 desde 07-05-2024\GalagaUSFX_Trabajo02_SegundoParcial-master\GalagaUSFX_Trabajo02_SegundoParcial-master\Source\GalagaUSFX_LAB06\NaveEnemigaTransporte.h
 D:\Mis repositorios SIS457 desde 07-05-2024\GalagaUSFX_Trabajo02_SegundoParcial-master\GalagaUSFX_Trabajo02_SegundoParcial-master\Source\GalagaUSFX_LAB06\NaveTerrestre_Artilleria.h
 D:\Mis repositorios SIS457 desde 07-05-2024\GalagaUSFX_Trabajo02_SegundoParcial-master\GalagaUSFX_Trabajo02_SegundoParcial-master\Source\GalagaUSFX_LAB06\NaveTerrestre_Transporte.h
+D:\Mis repositorios SIS457 desde 07-05-2024\GalagaUSFX_Trabajo02_SegundoParcial-master\GalagaUSFX_Trabajo02_SegundoParcial-master\Source\GalagaUSFX_LAB06\CreadorNavesTerrestres.h
+D:\Mis repositorios SIS457 desde 07-05-2024\GalagaUSFX_Trabajo02_SegundoParcial-master\GalagaUSFX_Trabajo02_SegundoParcial-master\Source\GalagaUSFX_LAB06\BuilderPortaNavesAereas.h
+D:\Mis repositorios SIS457 desde 07-05-2024\GalagaUSFX_Trabajo02_SegundoParcial-master\GalagaUSFX_Trabajo02_SegundoParcial-master\Source\GalagaUSFX_LAB06\GalagaUSFX_LAB06GameMode.h
 D:\Mis repositorios SIS457 desde 07-05-2024\GalagaUSFX_Trabajo02_SegundoParcial-master\GalagaUSFX_Trabajo02_SegundoParcial-master\Source\GalagaUSFX_LAB06\PortaNavesAereas.h
 D:\Mis repositorios SIS457 desde 07-05-2024\GalagaUSFX_Trabajo02_SegundoParcial-master\GalagaUSFX_Trabajo02_SegundoParcial-master\Source\GalagaUSFX_LAB06\PlanoPortaNavesAereas.h
-D:\Mis repositorios SIS457 desde 07-05-2024\GalagaUSFX_Trabajo02_SegundoParcial-master\GalagaUSFX_Trabajo02_SegundoParcial-master\Source\GalagaUSFX_LAB06\GalagaUSFX_LAB06Projectile.h
-D:\Mis repositorios SIS457 desde 07-05-2024\GalagaUSFX_Trabajo02_SegundoParcial-master\GalagaUSFX_Trabajo02_SegundoParcial-master\Source\GalagaUSFX_LAB06\GalagaUSFX_LAB06GameMode.h
+D:\Mis repositorios SIS457 desde 07-05-2024\GalagaUSFX_Trabajo02_SegundoParcial-master\GalagaUSFX_Trabajo02_SegundoParcial-master\Source\GalagaUSFX_LAB06\Hangar.h
 D:\Mis repositorios SIS457 desde 07-05-2024\GalagaUSFX_Trabajo02_SegundoParcial-master\GalagaUSFX_Trabajo02_SegundoParcial-master\Source\GalagaUSFX_LAB06\DirectorPortaNavesAereas.h

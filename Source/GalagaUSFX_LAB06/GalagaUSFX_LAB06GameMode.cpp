@@ -21,9 +21,10 @@
 #include "NaveAcuatica_Espia.h"
 
 #include "BuilderPortaNavesAereasNiv1.h"
-#include "DirectorPortaNavesAereas.h"
-#include "PortaNavesAereas.h"
 
+#include "DirectorPortaNavesAereas.h"
+
+#include "PortaNavesAereas.h"
 
 AGalagaUSFX_LAB06GameMode::AGalagaUSFX_LAB06GameMode()
 {
@@ -59,54 +60,7 @@ void AGalagaUSFX_LAB06GameMode::BeginPlay()
 	UWorld * World = GetWorld();
 	if (World != nullptr) 
 	{
-		//// Creamos 7 naves de la clase NaveEnemigaCaza
-		//for (int i = 0; i < 5; i++)
-		//{
-		//	ANaveEnemiga* NaveEnemiga = CreadorNaves->OrdenarNave("NaveEnemigaCaza", PosicionNaveEnemigas);
-		//	//NaveEnemiga->idClaveNave = ClaveNaves++; // Asignar la clave y luego incrementar
-		//	TANavesEnemigas.Add(NaveEnemiga); // agregamos la nave a la lista de naves enemigas
-		//	//TMAPocionesNavesEnemigas.Add(NaveEnemiga, ClaveNaves);
-		//	PosicionNaveEnemigas.Y += 200.0f; // sirve para que las naves esten separadas en el eje Y
-		//}
-		//// Actualizar la posicion para las naves de la clase caza
-		//PosicionNaveEnemigas.X = PosicionNaveEnemigas.X = -400.0f; // actualizo la posicion en la posicion X
-		//PosicionNaveEnemigas.Y = PosicionNaveEnemigas.Y = -650.0f; // actualizo la posicion en la posicion Y
-		//
-		//// Creamos 7 naves de la clase NaveEnemigaBombardero
-		//for (int i =0; i < 5; i++)
-		//{
-		//	ANaveEnemiga* NaveEnemiga = CreadorNaves->OrdenarNave("NaveEnemigaBombardero", PosicionNaveEnemigas);
-		//	TANavesEnemigas.Add(NaveEnemiga);
-		////TAPocionesNavesEnemigas.Add(NaveEnemiga, PosicionNaveInicial);
-		//	PosicionNaveEnemigas.Y += 200.0f; // sirve para que las naves esten separadas en el eje Y
-	
-		//}
-		//// Actualizar la posicion para las naves de la clase bombardero
-		//PosicionNaveEnemigas.X = PosicionNaveEnemigas.X = -200.0f; // actualizo la posicion en la posicion X
-		//PosicionNaveEnemigas.Y = PosicionNaveEnemigas.Y = -650.0f;  // actualizo la posicion en la posicion Y
-
-		//// Creamos 7 naves de la clase NaveEnemigaTransporte
-		//for (int i = 0; i < 5; i++)
-		//{
-		//	ANaveEnemiga* NaveEnemiga = CreadorNaves->OrdenarNave("NaveEnemigaEspia", PosicionNaveEnemigas);
-		//	TANavesEnemigas.Add(NaveEnemiga);
-		//	//TAPocionesNavesEnemigas.Add(NaveEnemiga, PosicionNaveInicial);
-		//	PosicionNaveEnemigas.Y += 200.0f; // sirve para que las naves esten separadas en el eje Y
-		//}
-		//// Actualizar la posicion para las naves de la clase espia
-		//PosicionNaveEnemigas.X = PosicionNaveEnemigas.X = 0.0f;  // actualizo la posicion en la posicion X
-		//PosicionNaveEnemigas.Y = PosicionNaveEnemigas.Y = -650.0f;  // actualizo la posicion en la posicion Y
-
-		//// Creamos 7 naves de la clase NaveEnemigaTransporte
-		//for (int i = 0; i < 5; i++)
-		//{
-		//	ANaveEnemiga* NaveEnemiga = CreadorNaves->OrdenarNave("NaveEnemigaTransporte", PosicionNaveEnemigas);
-		//	TANavesEnemigas.Add(NaveEnemiga); // agregamos la nave a la lista de naves enemigas
-		//	//TAPocionesNavesEnemigas.Add(NaveEnemiga, PosicionNaveInicial);
-		//	PosicionNaveEnemigas.Y += 200.0f; // sirve para que las naves esten separadas en el eje Y
-		//}
-
-
+		
 		// DESDE ACA SPAWNEAMOS LAS NAVES DE LAS FABRICAS DE NAVES AEREAS, TERRESTRES Y ACUATICAS
 
 
@@ -219,7 +173,6 @@ void AGalagaUSFX_LAB06GameMode::BeginPlay()
 		// Llamamos a la funcion ConstruirPortaNaveAerea para construir el portanaves aereas
 		DirectorPortaNavesAereas->ConstruirPortaNaveAerea(); // Llamamos a la funcion ConstruirPortaNaveAerea para construir el portanaves aereas
 
-
 		// Llamamos a la funcion GetPortaNaveAerea para obtener el portanaves aereas
 		APortaNavesAereas* PortaNaveAerea = DirectorPortaNavesAereas->GetPortaNaveAerea();
 		// Llamamos a la funcion CaracteristicasPortaNaveAerea para mostrar las caracteristicas del portanaves aereas
@@ -232,7 +185,6 @@ void AGalagaUSFX_LAB06GameMode::BeginPlay()
 		// Establecemos la Escala del PortaNaveAerea
 		FVector EscalaPortaNaveAerea = FVector(5.0f, 5.0f, 5.0f);
 		PortaNaveAerea->SetActorScale3D(EscalaPortaNaveAerea); // SetActorScale3D para establecer la escala del PortaNaveAerea
-
 		PortaNaveAerea->CaracteristicasPortaNaveAerea();
 
 

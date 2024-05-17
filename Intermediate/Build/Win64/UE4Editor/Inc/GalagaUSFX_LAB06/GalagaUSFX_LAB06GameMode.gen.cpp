@@ -69,9 +69,9 @@ void EmptyLinkFunctionForGeneratedCodeGalagaUSFX_LAB06GameMode() {}
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AGalagaUSFX_LAB06GameMode_Statics::NewProp_BuilderPortaNavesAereasNiv1_MetaData[] = {
 		{ "Category", "BuilderPNANiv1" },
-		{ "Comment", "//The Builder Actor\n" },
+		{ "Comment", "// Nivel 1\n//The Builder Actor\n" },
 		{ "ModuleRelativePath", "GalagaUSFX_LAB06GameMode.h" },
-		{ "ToolTip", "The Builder Actor" },
+		{ "ToolTip", "Nivel 1\nThe Builder Actor" },
 	};
 #endif
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AGalagaUSFX_LAB06GameMode_Statics::NewProp_BuilderPortaNavesAereasNiv1 = { "BuilderPortaNavesAereasNiv1", nullptr, (EPropertyFlags)0x0040000000020001, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AGalagaUSFX_LAB06GameMode, BuilderPortaNavesAereasNiv1), Z_Construct_UClass_ABuilderPortaNavesAereasNiv1_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AGalagaUSFX_LAB06GameMode_Statics::NewProp_BuilderPortaNavesAereasNiv1_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AGalagaUSFX_LAB06GameMode_Statics::NewProp_BuilderPortaNavesAereasNiv1_MetaData)) };
@@ -128,7 +128,7 @@ void EmptyLinkFunctionForGeneratedCodeGalagaUSFX_LAB06GameMode() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AGalagaUSFX_LAB06GameMode, 94015841);
+	IMPLEMENT_CLASS(AGalagaUSFX_LAB06GameMode, 822835583);
 	template<> GALAGAUSFX_LAB06_API UClass* StaticClass<AGalagaUSFX_LAB06GameMode>()
 	{
 		return AGalagaUSFX_LAB06GameMode::StaticClass();

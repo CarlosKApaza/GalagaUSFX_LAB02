@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\GalagaUSFX_LAB06.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{B6591B43-8CFF-4755-A7D5-8BE6C7B5DBA5}</UniqueIdentifier>
+      <UniqueIdentifier>{2E2BCF6C-5CF8-4360-BD3B-143AA2D2991C}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\GalagaUSFX_LAB06.Target.cs">
       <Filter>Source</Filter>
@@ -14,7 +14,7 @@
     <None Include="..\..\.gitattributes" />
     <None Include="..\..\.gitignore" />
     <Filter Include="Config">
-      <UniqueIdentifier>{2FF9C3C8-C992-4CC6-A793-4D01578DF981}</UniqueIdentifier>
+      <UniqueIdentifier>{3D763485-8065-4B8B-AC0E-C364646FC88B}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -32,7 +32,7 @@
       <Filter>Config</Filter>
     </None>
     <Filter Include="Source\GalagaUSFX_LAB06">
-      <UniqueIdentifier>{15C09012-2FDB-4FFF-81E3-EBABC162D082}</UniqueIdentifier>
+      <UniqueIdentifier>{55CF3AC9-9F4F-4F23-8803-7DB513197A78}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\GalagaUSFX_LAB06\BuilderPortaNavesAereas.cpp">
       <Filter>Source\GalagaUSFX_LAB06</Filter>
@@ -107,6 +107,12 @@
       <Filter>Source\GalagaUSFX_LAB06</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Source\GalagaUSFX_LAB06\GalagaUSFX_LAB06Projectile.h">
+      <Filter>Source\GalagaUSFX_LAB06</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\GalagaUSFX_LAB06\Hangar.cpp">
+      <Filter>Source\GalagaUSFX_LAB06</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\GalagaUSFX_LAB06\Hangar.h">
       <Filter>Source\GalagaUSFX_LAB06</Filter>
     </ClInclude>
     <ClCompile Include="..\..\Source\GalagaUSFX_LAB06\NaveAcuatica_Espia.cpp">

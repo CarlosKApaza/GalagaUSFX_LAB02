@@ -20,6 +20,7 @@ private:
 	//The PNA Actor
 	UPROPERTY(VisibleAnywhere, Category = "PortaNaveAerea")
 	class APortaNavesAereas* PortaNaveAerea;
+
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
@@ -30,8 +31,8 @@ public:
 
 
 	virtual void ConstruirHangar() override;
-	virtual void ConstruirRecargarMuniciones() override;
-	virtual void ConstruirEscudoAmericano() override;
+	virtual void ConstruirCentrodeMuniciones() override;
+	virtual void ConstruirEscudos() override;
 
 	virtual class APortaNavesAereas* GetPortaNaveAerea() override;
 };

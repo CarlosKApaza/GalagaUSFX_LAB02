@@ -22,10 +22,12 @@ class GALAGAUSFX_LAB06_API IBuilderPortaNavesAereas
 
 	// Add interface functions to this class. This is the class that will be inherited to implement this interface.
 public:
-
+	// metodos para el nivel 1
 	virtual void ConstruirHangar() = 0;
-	virtual void ConstruirRecargarMuniciones() = 0;
-	virtual void ConstruirEscudoAmericano() = 0;
+	virtual void ConstruirCentrodeMuniciones() = 0;
+	virtual void ConstruirEscudos() = 0;
 
 	virtual class APortaNavesAereas* GetPortaNaveAerea() = 0;
 };
+
+	

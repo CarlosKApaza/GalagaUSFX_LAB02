@@ -1,0 +1,3 @@
+D:\Mis repositorios SIS457 desde 07-05-2024\GalagaUSFX_Trabajo02_SegundoParcial-master\GalagaUSFX_Trabajo02_SegundoParcial-master\Intermediate\Build\Win64\UE4Editor\Development\GalagaUSFX_LAB06\Definitions.GalagaUSFX_LAB06.h
+D:\Mis repositorios SIS457 desde 07-05-2024\GalagaUSFX_Trabajo02_SegundoParcial-master\GalagaUSFX_Trabajo02_SegundoParcial-master\Source\GalagaUSFX_LAB06\Hangar.h
+D:\Mis repositorios SIS457 desde 07-05-2024\GalagaUSFX_Trabajo02_SegundoParcial-master\GalagaUSFX_Trabajo02_SegundoParcial-master\Intermediate\Build\Win64\UE4Editor\Inc\GalagaUSFX_LAB06\Hangar.generated.h

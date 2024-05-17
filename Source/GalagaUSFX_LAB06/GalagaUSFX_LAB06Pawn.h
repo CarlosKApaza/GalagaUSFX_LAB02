@@ -38,6 +38,10 @@ public:
 	UPROPERTY(Category = Gameplay, EditAnywhere, BlueprintReadWrite)
 	float MoveSpeed;
 
+	/* Maximum number of projectiles the player can fire */
+	UPROPERTY(Category = Gameplay, EditAnywhere, BlueprintReadWrite)
+	int32 MaxProjectiles; // Maximo de proyectiles que puede disparar
+
 	/** Sound to play each time we fire */
 	UPROPERTY(Category = Audio, EditAnywhere, BlueprintReadWrite)
 	class USoundBase* FireSound;
@@ -60,12 +64,13 @@ public:
 	static const FName FireRightBinding;
 
 private:
-
 	/* Flag to control firing  */
 	uint32 bCanFire : 1;
 
 	/** Handle for efficient management of ShotTimerExpired timer */
 	FTimerHandle TimerHandle_ShotTimerExpired;
+
+	int32 NumProjectilesFired; // Numero de proyectiles disparados
 
 public:
 	/** Returns ShipMeshComponent subobject **/
@@ -74,5 +79,17 @@ public:
 	FORCEINLINE class UCameraComponent* GetCameraComponent() const { return CameraComponent; }
 	/** Returns CameraBoom subobject **/
 	FORCEINLINE class USpringArmComponent* GetCameraBoom() const { return CameraBoom; }
+
+//public:
+//	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Gameplay")
+//	FVector PosicionPortaNaveAerea;
+//
+//	int32 NumBalas;
+//	int32 MaxBalas;
+
+	/*void RecargarBalasSiEnPosicionCorrecta();
+	void RecargarAutomaticamente();*/
+
+	//FTimerHandle TimerHandle_RecargaAutomatica;
 };
 

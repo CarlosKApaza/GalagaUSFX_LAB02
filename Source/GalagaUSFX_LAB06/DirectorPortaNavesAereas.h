@@ -5,6 +5,7 @@
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
 #include "BuilderPortaNavesAereas.h"
+
 #include "DirectorPortaNavesAereas.generated.h"
 
 UCLASS()
@@ -16,7 +17,10 @@ public:
 	// Sets default values for this actor's properties
 	ADirectorPortaNavesAereas();
 private:
-	IBuilderPortaNavesAereas* BuilderPortaNavesAereas;
+	IBuilderPortaNavesAereas* BuilderPortaNavesAereas; // Instanciamos una direccion de la interfaz BuilderPortaNavesAereas
+	
+
+
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
@@ -26,9 +30,10 @@ public:
 
 
 	//Creates the buildings
-	void ConstruirPortaNaveAerea();
-	void SetBuilderPortaNavesAereas(AActor* Builder);
-
+	void ConstruirPortaNaveAerea(); // Funcion que construye la PortaNaveAerea
+	void SetBuilderPortaNavesAereas(AActor* Builder); // Funcion que asigna el BuilderPortaNavesAereas 
 
 	class APortaNavesAereas* GetPortaNaveAerea();
+
+
 };

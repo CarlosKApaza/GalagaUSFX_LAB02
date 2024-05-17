@@ -13,6 +13,11 @@
 #include "Kismet/GameplayStatics.h"
 #include "Sound/SoundBase.h"
 
+#include "BuilderPortaNavesAereasNiv1.h"
+#include "PortaNavesAereas.h"
+#include "GalagaUSFX_LAB06GameMode.h"
+
+
 const FName AGalagaUSFX_LAB06Pawn::MoveForwardBinding("MoveForward");
 const FName AGalagaUSFX_LAB06Pawn::MoveRightBinding("MoveRight");
 const FName AGalagaUSFX_LAB06Pawn::FireForwardBinding("FireForward");
@@ -20,6 +25,9 @@ const FName AGalagaUSFX_LAB06Pawn::FireRightBinding("FireRight");
 
 AGalagaUSFX_LAB06Pawn::AGalagaUSFX_LAB06Pawn()
 {	
+	// Asignar los valores a PosicionPortaNaveAerea
+	//PosicionPortaNaveAerea = FVector(-1080.0f, 1650.0f, 160.0f);
+
 	static ConstructorHelpers::FObjectFinder<UStaticMesh> ShipMesh(TEXT("/Game/TwinStick/Meshes/TwinStickUFO.TwinStickUFO"));
 	// Create the mesh component
 	ShipMeshComponent = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("ShipMesh"));
@@ -50,6 +58,7 @@ AGalagaUSFX_LAB06Pawn::AGalagaUSFX_LAB06Pawn()
 	GunOffset = FVector(90.f, 0.f, 0.f);
 	FireRate = 0.1f;
 	bCanFire = true;
+	//MaxProjectiles = 30; // Inicializar MaxProjectiles aquí
 }
 
 void AGalagaUSFX_LAB06Pawn::SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent)
@@ -95,6 +104,12 @@ void AGalagaUSFX_LAB06Pawn::Tick(float DeltaSeconds)
 	const float FireRightValue = GetInputAxisValue(FireRightBinding);
 	const FVector FireDirection = FVector(FireForwardValue, FireRightValue, 0.f);
 
+	//// INTENTA DISPARAR SI HAY PROYECTILES DISPONIBLES
+	//if (NumProjectilesFired < MaxProjectiles) // Si el número de proyectiles disparados es menor al máximo de proyectiles
+	//{
+	//	FireShot(FireDirection); // Disparar
+	//}
+
 	// Try and fire a shot
 	FireShot(FireDirection);
 }
@@ -116,6 +131,7 @@ void AGalagaUSFX_LAB06Pawn::FireShot(FVector FireDirection)
 			{
 				// spawn the projectile
 				World->SpawnActor<AGalagaUSFX_LAB06Projectile>(SpawnLocation, FireRotation);
+				//NumProjectilesFired++; // Incrementar el número de proyectiles disparados.
 			}
 
 			bCanFire = false;
@@ -136,4 +152,29 @@ void AGalagaUSFX_LAB06Pawn::ShotTimerExpired()
 {
 	bCanFire = true;
 }
+//
+//void AGalagaUSFX_LAB06Pawn::RecargarBalasSiEnPosicionCorrecta()
+//{
+//	FVector PosicionActual = GetActorLocation();
+//	const float DistanciaUmbral = 200.0f; // Puedes ajustar esta distancia según sea necesario
+//	if ((PosicionActual - PosicionPortaNaveAerea).SizeSquared() <= FMath::Square(DistanciaUmbral)) { // Verifica si la nave está cerca de la posición del hangar
+//		ABuilderPortaNavesAereasNiv1* Builder = GetWorld()->SpawnActor<ABuilderPortaNavesAereasNiv1>(); // Crea una instancia del builder
+//		if (Builder) {
+//			Builder->ConstruirRecargarMuniciones(); // Llama al método del builder para recargar municiones
+//			UE_LOG(LogTemp, Warning, TEXT("Municiones recargadas en el hangar."));
+//
+//			// Configura un temporizador para recargar automáticamente después de un tiempo
+//			const float TiempoRecargaAutomatica = 20.0f; // Ajusta este valor según sea necesario
+//			GetWorldTimerManager().SetTimer(TimerHandle_RecargaAutomatica, this, &AGalagaUSFX_LAB06Pawn::RecargarAutomaticamente, TiempoRecargaAutomatica, false);
+//		}
+//		else {
+//			UE_LOG(LogTemp, Error, TEXT("No se pudo obtener el Builder para recargar municiones."));
+//		}
+//	}
+//}
 
+//void AGalagaUSFX_LAB06Pawn::RecargarAutomaticamente()
+//{
+//	// Recarga automáticamente después de un tiempo
+//	RecargarBalasSiEnPosicionCorrecta();
+//}

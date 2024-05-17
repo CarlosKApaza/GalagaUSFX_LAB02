@@ -3,6 +3,7 @@
 
 #include "DirectorPortaNavesAereas.h"
 #include "PortaNavesAereas.h"
+//#include "PortaNavesAereasNiv2.h"
 
 // Sets default values
 ADirectorPortaNavesAereas::ADirectorPortaNavesAereas()
@@ -26,6 +27,7 @@ void ADirectorPortaNavesAereas::Tick(float DeltaTime)
 
 }
 
+// Nivel 1
 void ADirectorPortaNavesAereas::ConstruirPortaNaveAerea()
 {
 	//Log if the Builder is NULL
@@ -35,8 +37,8 @@ void ADirectorPortaNavesAereas::ConstruirPortaNaveAerea()
 
 	//Creates the buildings
 	BuilderPortaNavesAereas->ConstruirHangar();
-	BuilderPortaNavesAereas->ConstruirRecargarMuniciones();
-	BuilderPortaNavesAereas->ConstruirEscudoAmericano();
+	BuilderPortaNavesAereas->ConstruirCentrodeMuniciones();
+	BuilderPortaNavesAereas->ConstruirEscudos();
 }
 
 void ADirectorPortaNavesAereas::SetBuilderPortaNavesAereas(AActor* Builder)
