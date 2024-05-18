@@ -1,7 +1,7 @@
-D:\Mis repositorios SIS457 desde 07-05-2024\GalagaUSFX_Trabajo02_SegundoParcial-master\GalagaUSFX_Trabajo02_SegundoParcial-master\Intermediate\Build\Win64\UE4Editor\DebugGame\GalagaUSFX_LAB06\Definitions.GalagaUSFX_LAB06.h
+D:\Mi Repositorio Final\GalagaUSFX_LAB02\GalagaUSFX_Trabajo02_SegundoParcial-master\Intermediate\Build\Win64\UE4Editor\DebugGame\GalagaUSFX_LAB06\Definitions.GalagaUSFX_LAB06.h
 C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\CoreUObject\Public\UObject/GeneratedCppIncludes.h
 C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\CoreUObject\Public\UObject/MetaData.h
-D:\Mis repositorios SIS457 desde 07-05-2024\GalagaUSFX_Trabajo02_SegundoParcial-master\GalagaUSFX_Trabajo02_SegundoParcial-master\Source\GalagaUSFX_LAB06/NaveEnemigaBombardero.h
-D:\Mis repositorios SIS457 desde 07-05-2024\GalagaUSFX_Trabajo02_SegundoParcial-master\GalagaUSFX_Trabajo02_SegundoParcial-master\Source\GalagaUSFX_LAB06\NaveEnemiga.h
-D:\Mis repositorios SIS457 desde 07-05-2024\GalagaUSFX_Trabajo02_SegundoParcial-master\GalagaUSFX_Trabajo02_SegundoParcial-master\Intermediate\Build\Win64\UE4Editor\Inc\GalagaUSFX_LAB06\NaveEnemiga.generated.h
-D:\Mis repositorios SIS457 desde 07-05-2024\GalagaUSFX_Trabajo02_SegundoParcial-master\GalagaUSFX_Trabajo02_SegundoParcial-master\Intermediate\Build\Win64\UE4Editor\Inc\GalagaUSFX_LAB06\NaveEnemigaBombardero.generated.h
+D:\Mi Repositorio Final\GalagaUSFX_LAB02\GalagaUSFX_Trabajo02_SegundoParcial-master\Source\GalagaUSFX_LAB06/NaveEnemigaBombardero.h
+D:\Mi Repositorio Final\GalagaUSFX_LAB02\GalagaUSFX_Trabajo02_SegundoParcial-master\Source\GalagaUSFX_LAB06\NaveEnemiga.h
+D:\Mi Repositorio Final\GalagaUSFX_LAB02\GalagaUSFX_Trabajo02_SegundoParcial-master\Intermediate\Build\Win64\UE4Editor\Inc\GalagaUSFX_LAB06\NaveEnemiga.generated.h
+D:\Mi Repositorio Final\GalagaUSFX_LAB02\GalagaUSFX_Trabajo02_SegundoParcial-master\Intermediate\Build\Win64\UE4Editor\Inc\GalagaUSFX_LAB06\NaveEnemigaBombardero.generated.h

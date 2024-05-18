@@ -90,7 +90,7 @@ void AGalagaUSFX_LAB06GameMode::BeginPlay()
 		for (int i = 0; i < 7; i++)
 		{
 			// Llamamos a la fabrica de naves aereas para crear una nave de la clase NaveAerea_Transporte
-			ANaveEnemiga* NaveEnemiga = CreadorNavesAereas->OrdenarNave("NaveAerea_Transporte", PosicionNavesAereas, FRotator::ZeroRotator);
+			ANaveEnemiga* NaveEnemiga = CreadorNavesAereas->OrdenarNave("NaveAerea_Transporte", PosicionNavesAereas, RotacionNavesAereas);
 			NaveEnemiga->idClaveNave = ClaveNaves++; // Asignar la clave y luego incrementar
 			TMClavesNavesEnemigas.Add(NaveEnemiga, ClaveNaves); // Agregamos la nave al TMap y la Clave de la naves aerea transporte
 			TMNavesEnemigas.Add(NaveEnemiga, PosicionNavesAereas); // Agregamos la nave al TMap y la Posicion de la nave aerea transporte
@@ -194,7 +194,7 @@ void AGalagaUSFX_LAB06GameMode::BeginPlay()
 		//				IMPLEMENTACION DE TEMPORIZADORES
 
 		// Temporizador para crear enemigos aleatorios cada 5 segundos
-		GetWorldTimerManager().SetTimer(FTHCrearEnemigosAleatorios, this, &AGalagaUSFX_LAB06GameMode::CrearEnemigos, 5.0f, true, 5.0f);
+		GetWorldTimerManager().SetTimer(FTHCrearEnemigosAleatorios, this, &AGalagaUSFX_LAB06GameMode::CrearEnemigos, 10.0f, true, 10.0f);
 
 		// Implementamos un temporizador que controla la visualización de las claves de las naves
 		GetWorldTimerManager().SetTimer(FTHMostrarClaves, this, &AGalagaUSFX_LAB06GameMode::MostrarClavesNaves, 1.0f, false);
@@ -255,8 +255,10 @@ void AGalagaUSFX_LAB06GameMode::CrearEnemigosAleatoriamente(TArray<FString> Tipo
 		{
 			++It;
 		}
+
 		FVector PosicionNaveNueva = It->Value;
-		FRotator RotacionNaveNueva = RotacionNaves;
+		FRotator RotacionNaveNueva = RotacionNaves; // Rotación en Z a 180 grados
+
 		// Ajustar la posición Y basada en el índice de iteración
 		PosicionNaveNueva.Y = PosicionY + (i * IncrementoY);
 
@@ -272,7 +274,7 @@ void AGalagaUSFX_LAB06GameMode::CrearEnemigosAleatoriamente(TArray<FString> Tipo
 		}
 		else if (TipoNaveEnemiga == "NaveAerea_Transporte")
 		{
-			NuevaNaveEnemiga = World->SpawnActor<ANaveAerea_Transporte>(ANaveAerea_Transporte::StaticClass(), PosicionNaveNueva, FRotator::ZeroRotator);
+			NuevaNaveEnemiga = World->SpawnActor<ANaveAerea_Transporte>(ANaveAerea_Transporte::StaticClass(), PosicionNaveNueva,RotacionNaveNueva);
 		}
 		// Agregar la nueva nave enemiga al mapa
 		if (NuevaNaveEnemiga)

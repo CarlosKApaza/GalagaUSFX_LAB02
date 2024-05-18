@@ -10,17 +10,9 @@ void ANaveAerea_Caza::BeginPlay()
 
 ANaveAerea_Caza::ANaveAerea_Caza()
 {
-	static ConstructorHelpers::FObjectFinder<UStaticMesh> malla(TEXT("StaticMesh'/Game/TwinStick/Meshes/TwinStickUFO_2.TwinStickUFO_2'"));
+	static ConstructorHelpers::FObjectFinder<UStaticMesh> malla(TEXT("StaticMesh'/Game/TwinStick/Meshes/TwinStickUFO_Caza.TwinStickUFO_Caza'"));
 	mallaNaveEnemiga->SetStaticMesh(malla.Object);
-	//Escala de la nave
-
-   /* FRotator Rotacion = FRotator(0.0f, 0.0f, 180.0f);
-	SetActorRotation(Rotacion);*/
-
-	// Escala de la nave
-	//EscalaNaveEnemiga = 1.0f;
-	//mallaNaveEnemiga->SetWorldScale3D(FVector(EscalaNaveEnemiga));
-
+	
 	// Definimos la velocidad en la que se movera la nave en el eje X porque esta creada de forma vertical
 	VelocidadYCaza = -250.0f;
 
@@ -30,11 +22,7 @@ ANaveAerea_Caza::ANaveAerea_Caza()
 
     // Recompensa de la nave cuando se destruya
 	recompensaNave = 10;  // la nave otorga 10 puntos al ser destruida
-
-	//RotacionNave = FRotator(0.0f, 0.0f, 180.0f);
-	//SetActorRotation(RotacionNave);
-
-   
+        
 }
 
 void ANaveAerea_Caza::Tick(float DeltaTime)
@@ -55,17 +43,10 @@ void ANaveAerea_Caza::Mover(float DeltaTime)
     float NuevaPosicionY = PosicionActual.Y + (VelocidadYCaza * DeltaTime);
 
     // Verificamos si la nave ha alcanzado el límite superior o inferior
-    if (NuevaPosicionY <= -1950.0f)
+    if (NuevaPosicionY <= -1000.0f || NuevaPosicionY >= 1000.0f )
     {
         // Cambiamos la dirección multiplicando por -1
         VelocidadYCaza *= -1.0f;
-    }
-    else if (NuevaPosicionY >= 1950.0f)
-    {
-        // Restablecemos la velocidad a su valor original
-		VelocidadYCaza *= -1.0f;
-		//VelocidadYCaza = 250.0f;
-        //VelocidadYCaza = FMath::Abs(VelocidadYCaza);
     }
     // Establecemos la nueva posición del actor
     SetActorLocation(FVector(PosicionActual.X + NuevaX, NuevaPosicionY, PosicionActual.Z));

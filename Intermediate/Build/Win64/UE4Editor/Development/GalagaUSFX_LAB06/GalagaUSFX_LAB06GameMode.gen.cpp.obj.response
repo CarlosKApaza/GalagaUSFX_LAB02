@@ -231,8 +231,8 @@
 /I Editor\Kismet\Public
 /I ..\Intermediate\Build\Win64\UE4Editor\Inc\ClothingSystemRuntimeInterface
 /I Runtime\ClothingSystemRuntimeInterface\Public
-/I "D:\Mis repositorios SIS457 desde 07-05-2024\GalagaUSFX_Trabajo02_SegundoParcial-master\GalagaUSFX_Trabajo02_SegundoParcial-master\Intermediate\Build\Win64\UE4Editor\Inc\GalagaUSFX_LAB06"
-/I "D:\Mis repositorios SIS457 desde 07-05-2024\GalagaUSFX_Trabajo02_SegundoParcial-master\GalagaUSFX_Trabajo02_SegundoParcial-master\Source"
+/I "D:\Mi Repositorio Final\GalagaUSFX_LAB02\GalagaUSFX_Trabajo02_SegundoParcial-master\Intermediate\Build\Win64\UE4Editor\Inc\GalagaUSFX_LAB06"
+/I "D:\Mi Repositorio Final\GalagaUSFX_LAB02\GalagaUSFX_Trabajo02_SegundoParcial-master\Source"
 /I ThirdParty\PhysX3\PxShared\include
 /I ThirdParty\PhysX3\PxShared\include\cudamanager
 /I ThirdParty\PhysX3\PxShared\include\filebuf
@@ -262,12 +262,12 @@
 /I "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\shared"
 /I "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\um"
 /I "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\winrt"
-/FI"D:\Mis repositorios SIS457 desde 07-05-2024\GalagaUSFX_Trabajo02_SegundoParcial-master\GalagaUSFX_Trabajo02_SegundoParcial-master\Intermediate\Build\Win64\GalagaUSFX_LAB06Editor\Development\Engine\SharedPCH.Engine.ShadowErrors.h"
-/Yu"D:\Mis repositorios SIS457 desde 07-05-2024\GalagaUSFX_Trabajo02_SegundoParcial-master\GalagaUSFX_Trabajo02_SegundoParcial-master\Intermediate\Build\Win64\GalagaUSFX_LAB06Editor\Development\Engine\SharedPCH.Engine.ShadowErrors.h"
-/Fp"D:\Mis repositorios SIS457 desde 07-05-2024\GalagaUSFX_Trabajo02_SegundoParcial-master\GalagaUSFX_Trabajo02_SegundoParcial-master\Intermediate\Build\Win64\GalagaUSFX_LAB06Editor\Development\Engine\SharedPCH.Engine.ShadowErrors.h.pch"
-"D:\Mis repositorios SIS457 desde 07-05-2024\GalagaUSFX_Trabajo02_SegundoParcial-master\GalagaUSFX_Trabajo02_SegundoParcial-master\Intermediate\Build\Win64\UE4Editor\Inc\GalagaUSFX_LAB06\GalagaUSFX_LAB06GameMode.gen.cpp"
-/FI"D:\Mis repositorios SIS457 desde 07-05-2024\GalagaUSFX_Trabajo02_SegundoParcial-master\GalagaUSFX_Trabajo02_SegundoParcial-master\Intermediate\Build\Win64\UE4Editor\Development\GalagaUSFX_LAB06\Definitions.GalagaUSFX_LAB06.h"
-/Fo"D:\Mis repositorios SIS457 desde 07-05-2024\GalagaUSFX_Trabajo02_SegundoParcial-master\GalagaUSFX_Trabajo02_SegundoParcial-master\Intermediate\Build\Win64\UE4Editor\Development\GalagaUSFX_LAB06\GalagaUSFX_LAB06GameMode.gen.cpp.obj"
+/FI"D:\Mi Repositorio Final\GalagaUSFX_LAB02\GalagaUSFX_Trabajo02_SegundoParcial-master\Intermediate\Build\Win64\GalagaUSFX_LAB06Editor\Development\Engine\SharedPCH.Engine.ShadowErrors.h"
+/Yu"D:\Mi Repositorio Final\GalagaUSFX_LAB02\GalagaUSFX_Trabajo02_SegundoParcial-master\Intermediate\Build\Win64\GalagaUSFX_LAB06Editor\Development\Engine\SharedPCH.Engine.ShadowErrors.h"
+/Fp"D:\Mi Repositorio Final\GalagaUSFX_LAB02\GalagaUSFX_Trabajo02_SegundoParcial-master\Intermediate\Build\Win64\GalagaUSFX_LAB06Editor\Development\Engine\SharedPCH.Engine.ShadowErrors.h.pch"
+"D:\Mi Repositorio Final\GalagaUSFX_LAB02\GalagaUSFX_Trabajo02_SegundoParcial-master\Intermediate\Build\Win64\UE4Editor\Inc\GalagaUSFX_LAB06\GalagaUSFX_LAB06GameMode.gen.cpp"
+/FI"D:\Mi Repositorio Final\GalagaUSFX_LAB02\GalagaUSFX_Trabajo02_SegundoParcial-master\Intermediate\Build\Win64\UE4Editor\Development\GalagaUSFX_LAB06\Definitions.GalagaUSFX_LAB06.h"
+/Fo"D:\Mi Repositorio Final\GalagaUSFX_LAB02\GalagaUSFX_Trabajo02_SegundoParcial-master\Intermediate\Build\Win64\UE4Editor\Development\GalagaUSFX_LAB06\GalagaUSFX_LAB06GameMode.gen.cpp.obj"
 /TP
 /GR-
 /W4

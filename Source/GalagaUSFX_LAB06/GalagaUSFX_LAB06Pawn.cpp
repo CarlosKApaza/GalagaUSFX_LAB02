@@ -36,7 +36,7 @@ AGalagaUSFX_LAB06Pawn::AGalagaUSFX_LAB06Pawn()
 	ShipMeshComponent->SetStaticMesh(ShipMesh.Object);
 	
 	// Cache our sound effect
-	static ConstructorHelpers::FObjectFinder<USoundBase> FireAudio(TEXT("/Game/TwinStick/Audio/TwinStickFire.TwinStickFire"));
+	static ConstructorHelpers::FObjectFinder<USoundBase> FireAudio(TEXT("SoundWave'/Game/AudioShot/laser-gun-shot-sound-future-sci-fi-lazer-wobble-chakongaudio-174883.laser-gun-shot-sound-future-sci-fi-lazer-wobble-chakongaudio-174883'"));
 	FireSound = FireAudio.Object;
 
 	// Create a camera boom...

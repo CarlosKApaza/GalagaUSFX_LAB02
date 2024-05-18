@@ -11,7 +11,7 @@ void ANaveAerea_Transporte::BeginPlay()
 
 ANaveAerea_Transporte::ANaveAerea_Transporte()
 {
-	static ConstructorHelpers::FObjectFinder<UStaticMesh> malla(TEXT("StaticMesh'/Game/StarterContent/Shapes/Shape_Wedge_A.Shape_Wedge_A'"));
+	static ConstructorHelpers::FObjectFinder<UStaticMesh> malla(TEXT("StaticMesh'/Game/TwinStick/Meshes/TwinStickUFO_Transporte.TwinStickUFO_Transporte'"));
 	mallaNaveEnemiga->SetStaticMesh(malla.Object);
 
 	NombreNave = "NaveAerea_Transporte"; //Nombre de la nave
@@ -40,16 +40,12 @@ void ANaveAerea_Transporte::Mover(float DeltaTime)
     float NuevaPosicionY = PosicionActual.Y + (VelocidadYTransporte * DeltaTime);
 
     // Verificamos si la nave ha alcanzado el límite superior o inferior
-    if (NuevaPosicionY <= -1950.0f)
+    if (NuevaPosicionY <= -1000.0f || NuevaPosicionY >= 1000.0f)
     {
         // Cambiamos la dirección multiplicando por -1
         VelocidadYTransporte *= -1.0f;
     }
-    else if (NuevaPosicionY >= 1950.0f)
-    {
-        // Cambiamos la dirección multiplicando por -1
-        VelocidadYTransporte *= -1.0f;
-    }
+     
     // Establecemos la nueva posición del actor
     SetActorLocation(FVector(PosicionActual.X + NuevaX, NuevaPosicionY, PosicionActual.Z));
 }
