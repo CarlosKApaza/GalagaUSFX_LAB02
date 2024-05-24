@@ -17,6 +17,7 @@ void EmptyLinkFunctionForGeneratedCodeHangar() {}
 	GALAGAUSFX_LAB06_API UClass* Z_Construct_UClass_AHangar();
 	ENGINE_API UClass* Z_Construct_UClass_AActor();
 	UPackage* Z_Construct_UPackage__Script_GalagaUSFX_LAB06();
+	ENGINE_API UClass* Z_Construct_UClass_UStaticMeshComponent_NoRegister();
 // End Cross Module References
 	void AHangar::StaticRegisterNativesAHangar()
 	{
@@ -31,6 +32,11 @@ void EmptyLinkFunctionForGeneratedCodeHangar() {}
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam Class_MetaDataParams[];
 #endif
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_MeshHangar_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_MeshHangar;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UE4CodeGen_Private::FClassParams ClassParams;
 	};
@@ -44,6 +50,18 @@ void EmptyLinkFunctionForGeneratedCodeHangar() {}
 		{ "ModuleRelativePath", "Hangar.h" },
 	};
 #endif
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AHangar_Statics::NewProp_MeshHangar_MetaData[] = {
+		{ "AllowPrivateAccess", "true" },
+		{ "Category", "Projectile" },
+		{ "EditInline", "true" },
+		{ "ModuleRelativePath", "Hangar.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AHangar_Statics::NewProp_MeshHangar = { "MeshHangar", nullptr, (EPropertyFlags)0x00100000000a001d, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AHangar, MeshHangar), Z_Construct_UClass_UStaticMeshComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AHangar_Statics::NewProp_MeshHangar_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AHangar_Statics::NewProp_MeshHangar_MetaData)) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AHangar_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AHangar_Statics::NewProp_MeshHangar,
+	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_AHangar_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<AHangar>::IsAbstract,
 	};
@@ -53,11 +71,11 @@ void EmptyLinkFunctionForGeneratedCodeHangar() {}
 		&StaticCppClassTypeInfo,
 		DependentSingletons,
 		nullptr,
-		nullptr,
+		Z_Construct_UClass_AHangar_Statics::PropPointers,
 		nullptr,
 		UE_ARRAY_COUNT(DependentSingletons),
 		0,
-		0,
+		UE_ARRAY_COUNT(Z_Construct_UClass_AHangar_Statics::PropPointers),
 		0,
 		0x009000A4u,
 		METADATA_PARAMS(Z_Construct_UClass_AHangar_Statics::Class_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UClass_AHangar_Statics::Class_MetaDataParams))
@@ -71,7 +89,7 @@ void EmptyLinkFunctionForGeneratedCodeHangar() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AHangar, 3999141677);
+	IMPLEMENT_CLASS(AHangar, 1340637953);
 	template<> GALAGAUSFX_LAB06_API UClass* StaticClass<AHangar>()
 	{
 		return AHangar::StaticClass();

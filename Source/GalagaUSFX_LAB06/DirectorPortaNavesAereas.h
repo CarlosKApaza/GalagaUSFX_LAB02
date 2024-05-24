@@ -16,24 +16,24 @@ class GALAGAUSFX_LAB06_API ADirectorPortaNavesAereas : public AActor
 public:	
 	// Sets default values for this actor's properties
 	ADirectorPortaNavesAereas();
-private:
-	IBuilderPortaNavesAereas* BuilderPortaNavesAereas; // Instanciamos una direccion de la interfaz BuilderPortaNavesAereas
-	
-
 
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
+
+private:
+	IBuilderPortaNavesAereas* BuilderPortaNavesAereas; // Instanciamos una direccion de la interfaz BuilderPortaNavesAereas
+
+
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
-
 	//Creates the buildings
 	void ConstruirPortaNaveAerea(); // Funcion que construye la PortaNaveAerea
+
 	void SetBuilderPortaNavesAereas(AActor* Builder); // Funcion que asigna el BuilderPortaNavesAereas 
 
 	class APortaNavesAereas* GetPortaNaveAerea();
-
 
 };

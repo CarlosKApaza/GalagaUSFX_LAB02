@@ -28,12 +28,12 @@ C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\In
 C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\GameplayStatics.generated.h
 D:\Mi Repositorio Final\GalagaUSFX_LAB02\GalagaUSFX_Trabajo02_SegundoParcial-master\Source\GalagaUSFX_LAB06\BuilderPortaNavesAereasNiv1.h
 D:\Mi Repositorio Final\GalagaUSFX_LAB02\GalagaUSFX_Trabajo02_SegundoParcial-master\Source\GalagaUSFX_LAB06\BuilderPortaNavesAereas.h
-D:\Mi Repositorio Final\GalagaUSFX_LAB02\GalagaUSFX_Trabajo02_SegundoParcial-master\Intermediate\Build\Win64\UE4Editor\Inc\GalagaUSFX_LAB06\BuilderPortaNavesAereas.generated.h
-D:\Mi Repositorio Final\GalagaUSFX_LAB02\GalagaUSFX_Trabajo02_SegundoParcial-master\Intermediate\Build\Win64\UE4Editor\Inc\GalagaUSFX_LAB06\BuilderPortaNavesAereasNiv1.generated.h
 D:\Mi Repositorio Final\GalagaUSFX_LAB02\GalagaUSFX_Trabajo02_SegundoParcial-master\Source\GalagaUSFX_LAB06\PortaNavesAereas.h
 D:\Mi Repositorio Final\GalagaUSFX_LAB02\GalagaUSFX_Trabajo02_SegundoParcial-master\Source\GalagaUSFX_LAB06\PlanoPortaNavesAereas.h
 D:\Mi Repositorio Final\GalagaUSFX_LAB02\GalagaUSFX_Trabajo02_SegundoParcial-master\Intermediate\Build\Win64\UE4Editor\Inc\GalagaUSFX_LAB06\PlanoPortaNavesAereas.generated.h
 D:\Mi Repositorio Final\GalagaUSFX_LAB02\GalagaUSFX_Trabajo02_SegundoParcial-master\Intermediate\Build\Win64\UE4Editor\Inc\GalagaUSFX_LAB06\PortaNavesAereas.generated.h
+D:\Mi Repositorio Final\GalagaUSFX_LAB02\GalagaUSFX_Trabajo02_SegundoParcial-master\Intermediate\Build\Win64\UE4Editor\Inc\GalagaUSFX_LAB06\BuilderPortaNavesAereas.generated.h
+D:\Mi Repositorio Final\GalagaUSFX_LAB02\GalagaUSFX_Trabajo02_SegundoParcial-master\Intermediate\Build\Win64\UE4Editor\Inc\GalagaUSFX_LAB06\BuilderPortaNavesAereasNiv1.generated.h
 D:\Mi Repositorio Final\GalagaUSFX_LAB02\GalagaUSFX_Trabajo02_SegundoParcial-master\Source\GalagaUSFX_LAB06\GalagaUSFX_LAB06GameMode.h
 C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\GameFramework/GameModeBase.h
 C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\Engine/ServerStatReplicator.h

@@ -4,6 +4,11 @@
 #include "BuilderPortaNavesAereasNiv1.h"
 #include "PortaNavesAereas.h"
 
+#include "Hangar.h"
+#include "CentroMuniciones.h"
+#include "Escudo.h"
+#include "Motor.h"
+
 // Sets default values
 ABuilderPortaNavesAereasNiv1::ABuilderPortaNavesAereasNiv1()
 {
@@ -16,62 +21,57 @@ ABuilderPortaNavesAereasNiv1::ABuilderPortaNavesAereasNiv1()
 void ABuilderPortaNavesAereasNiv1::BeginPlay()
 {
 	Super::BeginPlay();
-
-	//Spawn the PNA Actors
 	PortaNaveAerea = GetWorld()->SpawnActor<APortaNavesAereas>(APortaNavesAereas::StaticClass());
-	//Attach it to the Builder (this)
 	PortaNaveAerea->AttachToActor(this, FAttachmentTransformRules::KeepRelativeTransform);
-	
 }
 
 // Called every frame
 void ABuilderPortaNavesAereasNiv1::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
-
 }
 
 void ABuilderPortaNavesAereasNiv1::ConstruirHangar()
 {
-	if (!PortaNaveAerea) {
-		UE_LOG(LogTemp, Error, TEXT("BuildSwimmingPool():Lodging is NULL, make sure it's initialized.")); return; 
-		PortaNaveAerea->SetHangar("Hangar");
-	}
+	FVector Location = FVector(0, 0, 300);
+	FRotator Rotation = FRotator(0.0f, 180.0f, 0.0f);
+	FVector Escala = FVector(3.0f, 3.0f, 3.0f);
+	Hangar = GetWorld()->SpawnActor<AHangar>(AHangar::StaticClass(), Location, Rotation);
+	Hangar->SetActorScale3D(Escala);
+	PortaNaveAerea->SetHangar(Hangar, " Hangar ");
 }
 
 void ABuilderPortaNavesAereasNiv1::ConstruirCentrodeMuniciones()
 {
-	if (!PortaNaveAerea) {
-		UE_LOG(LogTemp, Error, TEXT("BuildSwimmingPool():Lodging is NULL, make sure it's initialized.")); return;
-		PortaNaveAerea->SetCentrodeMuniciones("Centro de Municiones");
-	}
+	FVector Location = FVector(0, 200, 300);
+	FRotator Rotation = FRotator(0.0f, 180.0f, 0.0f);
+	FVector Location2 = FVector(0, -200, 300);
+	CentroMuniciones = GetWorld()->SpawnActor<ACentroMuniciones>(ACentroMuniciones::StaticClass(), Location, Rotation);
+	CentroMuniciones = GetWorld()->SpawnActor<ACentroMuniciones>(ACentroMuniciones::StaticClass(), Location2, Rotation);
+	PortaNaveAerea->SetCentrodeMuniciones(CentroMuniciones, " Centro de Municiones ");
 }
-
-//void ABuilderPortaNavesAereasNiv1::ConstruirCentrodeMuniciones()
-//{
-//	if (PortaNaveAerea)
-//	{
-//		// Llama al método en PortaNavesAereas para recargar las municiones
-//		PortaNaveAerea->RecargarBalas(PortaNaveAerea->GetMaxBalas() - PortaNaveAerea->GetNumBalas()); // Asegúrate de no exceder el máximo
-//		UE_LOG(LogTemp, Warning, TEXT("Municiones recargadas en el hangar."));
-//	}
-//	else
-//	{
-//		UE_LOG(LogTemp, Error, TEXT("PortaNaveAerea is NULL, make sure it's initialized."));
-//	}
-//}
 
 void ABuilderPortaNavesAereasNiv1::ConstruirEscudos()
 {
-	if (!PortaNaveAerea) {
-		UE_LOG(LogTemp, Error, TEXT("BuildSwimmingPool():Lodging is NULL, make sure it's initialized.")); return; 
-		PortaNaveAerea->SetCentrodeEscudos("Centro de Escudos");
-	}
+	FVector Location = FVector(-100, -200, 90);
+	FRotator Rotation = FRotator(0.0f, 90.0f, 0.0f);
+	Escudo = GetWorld()->SpawnActor<AEscudo>(AEscudo::StaticClass(), Location, Rotation);
+	PortaNaveAerea->SetEscudos(Escudo, " Escudo ");
+}
+
+void ABuilderPortaNavesAereasNiv1::ConstruirMotor()
+{
+	FVector Location = FVector(200, 0, 300);
+	FRotator Rotation = FRotator(-90.0f, 0.0f, 0.0f);
+	Motor = GetWorld()->SpawnActor<AMotor>(AMotor::StaticClass(), Location, Rotation);
+	PortaNaveAerea->SetMotor(Motor, " Motor ");
 }
 
 APortaNavesAereas* ABuilderPortaNavesAereasNiv1::GetPortaNaveAerea()
 {
 	return PortaNaveAerea;
-	
+
 }
+
+
 

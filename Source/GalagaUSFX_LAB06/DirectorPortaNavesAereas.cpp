@@ -3,7 +3,7 @@
 
 #include "DirectorPortaNavesAereas.h"
 #include "PortaNavesAereas.h"
-//#include "PortaNavesAereasNiv2.h"
+
 
 // Sets default values
 ADirectorPortaNavesAereas::ADirectorPortaNavesAereas()
@@ -30,38 +30,22 @@ void ADirectorPortaNavesAereas::Tick(float DeltaTime)
 // Nivel 1
 void ADirectorPortaNavesAereas::ConstruirPortaNaveAerea()
 {
-	//Log if the Builder is NULL
-	if (!BuilderPortaNavesAereas) {
-		UE_LOG(LogTemp, Error, TEXT("ConstructLodging(): LodgingBuilder is NULL, make sure it's initialized.")); return;
+	if (BuilderPortaNavesAereas)
+	{
+		BuilderPortaNavesAereas->ConstruirHangar();
+		BuilderPortaNavesAereas->ConstruirCentrodeMuniciones();
+		BuilderPortaNavesAereas->ConstruirEscudos();
+		BuilderPortaNavesAereas->ConstruirMotor();
 	}
-
-	//Creates the buildings
-	BuilderPortaNavesAereas->ConstruirHangar();
-	BuilderPortaNavesAereas->ConstruirCentrodeMuniciones();
-	BuilderPortaNavesAereas->ConstruirEscudos();
 }
 
 void ADirectorPortaNavesAereas::SetBuilderPortaNavesAereas(AActor* Builder)
 {
-	//Cast the passed Actor and set the Builder
 	BuilderPortaNavesAereas = Cast<IBuilderPortaNavesAereas>(Builder);
-
-	if (!BuilderPortaNavesAereas) //Log Error if cast fails
-	{
-		GEngine->AddOnScreenDebugMessage(-1, 15.f, FColor::Red, TEXT("Invalid Cast! See Output log for more details"));
-		UE_LOG(LogTemp, Error, TEXT("SetBuilderPortaNavesAereas(): The Actor is not a LodgingBuilder!Are you sure that the Actor implements thatinterface ? "));
-	}
 }
 
 APortaNavesAereas* ADirectorPortaNavesAereas::GetPortaNaveAerea()
 {
-	if (BuilderPortaNavesAereas)
-	{
-		//Return the Lodging of the Builder
-		return BuilderPortaNavesAereas->GetPortaNaveAerea();
-	}
-	//Log if the Builder is NULL
-	UE_LOG(LogTemp, Error, TEXT("GetPortaNaveAerea(): Return nullptr"));
-	return nullptr;
+	return BuilderPortaNavesAereas->GetPortaNaveAerea();
 }
 

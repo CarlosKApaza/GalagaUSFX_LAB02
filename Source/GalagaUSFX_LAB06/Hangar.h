@@ -10,7 +10,11 @@ UCLASS()
 class GALAGAUSFX_LAB06_API AHangar : public AActor
 {
 	GENERATED_BODY()
-	
+
+public:
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Projectile, meta = (AllowPrivateAccess = "true"))
+	UStaticMeshComponent* MeshHangar;
+
 public:	
 	// Sets default values for this actor's properties
 	AHangar();

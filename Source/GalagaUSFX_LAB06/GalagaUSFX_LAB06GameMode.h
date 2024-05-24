@@ -21,15 +21,12 @@ protected:
 	virtual void BeginPlay() override;
 
 private:
-	// Nivel 1
-	//The Builder Actor
-	UPROPERTY(VisibleAnywhere, Category = "BuilderPNANiv1")
-	class ABuilderPortaNavesAereasNiv1* BuilderPortaNavesAereasNiv1; 
-
-	//The Engineer Actor
-	UPROPERTY(VisibleAnywhere, Category = "DirectorPNA")
+	// builder concreto 1
+	UPROPERTY(VisibleAnywhere, Category = "BuilderPortaNavesAereasNiv1")
+	class ABuilderPortaNavesAereasNiv1* BuilderPortaNavesAereasNiv1;
+	// builder director
+	UPROPERTY(VisibleAnywhere, Category = "DirectorPortaNavesAereas")
 	class ADirectorPortaNavesAereas* DirectorPortaNavesAereas;
-
 
 	
 public:

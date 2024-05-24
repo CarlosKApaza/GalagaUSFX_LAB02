@@ -5,7 +5,6 @@
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
 #include "BuilderPortaNavesAereas.h"
-
 #include "BuilderPortaNavesAereasNiv1.generated.h"
 
 UCLASS()
@@ -33,6 +32,7 @@ public:
 	virtual void ConstruirHangar() override;
 	virtual void ConstruirCentrodeMuniciones() override;
 	virtual void ConstruirEscudos() override;
+	virtual void ConstruirMotor() override;
 
 	virtual class APortaNavesAereas* GetPortaNaveAerea() override;
 };

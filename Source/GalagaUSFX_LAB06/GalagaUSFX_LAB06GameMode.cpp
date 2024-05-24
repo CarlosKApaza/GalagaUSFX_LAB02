@@ -20,10 +20,9 @@
 #include "NaveAcuatica_Exploracion.h"
 #include "NaveAcuatica_Espia.h"
 
+
 #include "BuilderPortaNavesAereasNiv1.h"
-
 #include "DirectorPortaNavesAereas.h"
-
 #include "PortaNavesAereas.h"
 
 AGalagaUSFX_LAB06GameMode::AGalagaUSFX_LAB06GameMode()
@@ -43,31 +42,22 @@ void AGalagaUSFX_LAB06GameMode::BeginPlay()
 
 	//// LLamando a la fabrica de naves enemigas
 	//ACreadorNaves* CreadorNaves = GetWorld()->SpawnActor<ACreadorNavesEnemigas>(ACreadorNavesEnemigas::StaticClass());
-	
 	// LLamando a la fabrica de naves aereas 
 	ACreadorNaves* CreadorNavesAereas = GetWorld()->SpawnActor<ACreadorNavesAereas>(ACreadorNavesAereas::StaticClass());
-
 	// LLamando a la fabrica de naves terrestres
 	ACreadorNaves* CreadorNavesTerrestres = GetWorld()->SpawnActor<ACreadorNavesTerrestres>(ACreadorNavesTerrestres::StaticClass());
-
 	// LLamando a la fabrica de naves acuaticas
 	ACreadorNaves* CreadorNavesAcuaticas = GetWorld()->SpawnActor<ACreadorNavesAcuaticas>(ACreadorNavesAcuaticas::StaticClass());
-
 	//// Definiendo las posiciones de las naves enemigas
 	//FVector	PosicionNaveEnemigas = FVector(-600.0f, -650.0f, 200.0f); // Posicion inicial de las naves enemigas
-
 
 	UWorld * World = GetWorld();
 	if (World != nullptr) 
 	{
-		
 		// DESDE ACA SPAWNEAMOS LAS NAVES DE LAS FABRICAS DE NAVES AEREAS, TERRESTRES Y ACUATICAS
-
-
 		// Creamos una nueva Posicion para las naves tipo Aereas
 		FVector	PosicionNavesAereas = FVector(-450.0f, -200.0f, 200.0f);
 		FRotator RotacionNavesAereas = FRotator(0.0f, 180.0f, 0.0f);  // Rotación en Z a 180 grados
-
 
 		// Creamos 7 naves de la clase NaveAerea_Caza
 		for (int i = 0; i < 7; i++)
@@ -97,7 +87,6 @@ void AGalagaUSFX_LAB06GameMode::BeginPlay()
 			TANavesEnemigas.Add(NaveEnemiga); // Agregamos la nave a la lista de naves enemigas
 			PosicionNavesAereas.Y += 200.0f; // Sirve para que las naves esten separadas en el eje X
 		}
-
 
 		// Definiendo nuevas posiciones de las Naves Terrestres
 		FVector	PosicionNavesTerrestres = FVector(300.0f, -650.0f, 200.0f); // Posicion inicial de las Naves Terrestres
@@ -161,46 +150,39 @@ void AGalagaUSFX_LAB06GameMode::BeginPlay()
 			PosicionNavesAcuaticas.Y += 250.0f; // sirve para que las naves esten separadas en el eje X
 		}
 
-		//				IMPLEMENTACION DE PATRON BUILDER PARA CONSTRUIR EL PORTANAVES AEREAS
 
-		// Instanciamos el constructor concreto BuilderPortaNavesAereasNiv1 del patron BuilderPortaNavesAereas
-		BuilderPortaNavesAereasNiv1 = GetWorld()->SpawnActor<ABuilderPortaNavesAereasNiv1>(ABuilderPortaNavesAereasNiv1::StaticClass());
+		//	IMPLEMENTACION DE PATRON BUILDER PARA CONSTRUIR EL PORTANAVES AEREAS
 
-		// Instanciamos el director concreto DirectorPortaNavesAereas del patron BuilderPortaNavesAereas
+	//-----------------------------------------------------BUILDER----------------------------------------------------------------------------------//
+	//UWorld* cWorld = GetWorld();
+	//if (World != nullptr)//verificar si el mundo es diferente de nulo
+	//{
 		DirectorPortaNavesAereas = GetWorld()->SpawnActor<ADirectorPortaNavesAereas>(ADirectorPortaNavesAereas::StaticClass());
 
-		// Llamamos a la funcion SetBuilderPortaNavesAereas para asignar el BuilderPortaNavesAereasNiv1 al DirectorPortaNavesAereas
-		DirectorPortaNavesAereas->SetBuilderPortaNavesAereas(BuilderPortaNavesAereasNiv1);
+		switch (FMath::RandRange(1, 1))
+		{
+		case 1:
+			BuilderPortaNavesAereasNiv1 = GetWorld()->SpawnActor<ABuilderPortaNavesAereasNiv1>(ABuilderPortaNavesAereasNiv1::StaticClass());//Spawning Concrete Builder
+			DirectorPortaNavesAereas->SetBuilderPortaNavesAereas(BuilderPortaNavesAereasNiv1);//Setting Builder to Director 
+			DirectorPortaNavesAereas->ConstruirPortaNaveAerea();//Constructing Ships 
+			break;
 
-		// Llamamos a la funcion ConstruirPortaNaveAerea para construir el portanaves aereas
-		DirectorPortaNavesAereas->ConstruirPortaNaveAerea(); // Llamamos a la funcion ConstruirPortaNaveAerea para construir el portanaves aereas
-
-		// Llamamos a la funcion GetPortaNaveAerea para obtener el portanaves aereas
-		APortaNavesAereas* PortaNaveAerea = DirectorPortaNavesAereas->GetPortaNaveAerea();
-		// Llamamos a la funcion CaracteristicasPortaNaveAerea para mostrar las caracteristicas del portanaves aereas
-
-
-		// Establecemos la Posicion de la PortaNaveAerea 
-		FVector PosicionPortaNaveAerea = FVector(-1080.0f, 1650.0f, 160.0f);
-		PortaNaveAerea->SetActorLocation(PosicionPortaNaveAerea); // usamos SetActorLocation para establecer la posicion del PortaNave porque el objeto ya existe solo hace falta asignarle la posicion
-		
-		// Establecemos la Escala del PortaNaveAerea
-		FVector EscalaPortaNaveAerea = FVector(5.0f, 5.0f, 5.0f);
-		PortaNaveAerea->SetActorScale3D(EscalaPortaNaveAerea); // SetActorScale3D para establecer la escala del PortaNaveAerea
-		PortaNaveAerea->CaracteristicasPortaNaveAerea();
+			APortaNavesAereas* PortaNaveAerea = DirectorPortaNavesAereas->GetPortaNaveAerea();
+			PortaNaveAerea->CaracteristicasPortaNaveAerea();
+		}
 
 
+		//-----------------------------------------------TEMPORIZADORES-------------------------------------------------------------------------//
 
-		//				IMPLEMENTACION DE TEMPORIZADORES
-
-		// Temporizador para crear enemigos aleatorios cada 5 segundos
+							// Temporizador para crear enemigos aleatorios cada 5 segundos
 		GetWorldTimerManager().SetTimer(FTHCrearEnemigosAleatorios, this, &AGalagaUSFX_LAB06GameMode::CrearEnemigos, 10.0f, true, 10.0f);
 
 		// Implementamos un temporizador que controla la visualización de las claves de las naves
 		GetWorldTimerManager().SetTimer(FTHMostrarClaves, this, &AGalagaUSFX_LAB06GameMode::MostrarClavesNaves, 1.0f, false);
 
+		}
 	}
-}
+	//}
 
 void AGalagaUSFX_LAB06GameMode::MostrarClavesNaves()
 {

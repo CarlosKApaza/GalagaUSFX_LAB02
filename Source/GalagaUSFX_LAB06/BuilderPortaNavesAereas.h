@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "UObject/Interface.h"
+#include "PortaNavesAereas.h"
 #include "BuilderPortaNavesAereas.generated.h"
 
 // This class does not need to be modified.
@@ -26,8 +27,16 @@ public:
 	virtual void ConstruirHangar() = 0;
 	virtual void ConstruirCentrodeMuniciones() = 0;
 	virtual void ConstruirEscudos() = 0;
+	virtual void ConstruirMotor() = 0;
 
 	virtual class APortaNavesAereas* GetPortaNaveAerea() = 0;
+
+
+	class AHangar* Hangar;
+	class ACentroMuniciones* CentroMuniciones;
+	class AEscudo* Escudo;
+	class AMotor* Motor;
+
 };
 
 	

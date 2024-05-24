@@ -18,10 +18,19 @@ class GALAGAUSFX_LAB06_API APortaNavesAereas : public AActor, public IPlanoPorta
 public:	
 	// Sets default values for this actor's properties
 	APortaNavesAereas();
+
 private:
-	FString Hangar;
+
+	class AHangar* HangarPorta;
+	class ACentroMuniciones* CentroMunicionesPorta;
+	class AEscudo* EscudoPorta;
+	class AMotor* MotorPorta;
+
+
+	FString Hangars;
 	FString CentroMuniciones;
 	FString Escudos;
+	FString Motors;
 
 protected:
 	// Called when the game starts or when spawned
@@ -32,16 +41,12 @@ public:
 	virtual void Tick(float DeltaTime) override;
 
 	// Metodos 
-	void SetHangar(FString _hangar) override;
-	void SetCentrodeMuniciones(FString _Municiones) override; // 
-	void SetCentrodeEscudos(FString _escudos) override;
+	virtual void SetHangar(AHangar* hangar, FString hangars) override;
+	virtual void SetCentrodeMuniciones(ACentroMuniciones* centroMuniciones, FString municiones) override; // 
+	virtual void SetEscudos(AEscudo* escudo, FString escudoss) override;
+	virtual void SetMotor(AMotor* motor, FString motors) override;
 
 	void CaracteristicasPortaNaveAerea();
-
-
-public:
-	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Components", meta = (AllowPrivateAccess = "true"))
-	UStaticMeshComponent* MallaPortaNave;
 
 	/*UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "PortaNavesAereas")
     TArray<APortaNavesAereas*> Almacenamiento;*/

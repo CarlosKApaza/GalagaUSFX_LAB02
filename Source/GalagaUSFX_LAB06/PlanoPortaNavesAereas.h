@@ -24,9 +24,10 @@ class GALAGAUSFX_LAB06_API IPlanoPortaNavesAereas
 public:
 
 	// metodos para el nivel 1
-	virtual void SetHangar(FString hangar) = 0;
-	virtual void SetCentrodeMuniciones(FString Municiones) = 0;
-	virtual void SetCentrodeEscudos(FString escudos) = 0;
+	virtual void SetHangar(class AHangar* Hangar, FString malla) = 0;
+	virtual void SetCentrodeMuniciones(class ACentroMuniciones* CentroMuniciones, FString municiones) = 0;
+	virtual void SetEscudos(class AEscudo* Escudo, FString escudo) = 0;
+	virtual void SetMotor(class AMotor* Motor, FString motor) = 0;
 
 
 };

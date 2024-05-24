@@ -1,0 +1,3 @@
+D:\Mi Repositorio Final\GalagaUSFX_LAB02\GalagaUSFX_Trabajo02_SegundoParcial-master\Intermediate\Build\Win64\UE4Editor\Development\GalagaUSFX_LAB06\Definitions.GalagaUSFX_LAB06.h
+D:\Mi Repositorio Final\GalagaUSFX_LAB02\GalagaUSFX_Trabajo02_SegundoParcial-master\Source\GalagaUSFX_LAB06\Motor.h
+D:\Mi Repositorio Final\GalagaUSFX_LAB02\GalagaUSFX_Trabajo02_SegundoParcial-master\Intermediate\Build\Win64\UE4Editor\Inc\GalagaUSFX_LAB06\Motor.generated.h
